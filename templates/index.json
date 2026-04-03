@@ -71,6 +71,104 @@
         "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
       }
     },
+    "featured_product_3NJKdP": {
+      "type": "featured-product",
+      "blocks": {
+        "title_KWUwkU": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "price_W8gQaY": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating_mATKGi": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "variant_picker_eeW7Eq": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_bJnrRz": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_6XEqpp": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#000000",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "collapsible_text_giTnVY": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_Q3qrbF": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_KWUwkU",
+        "price_W8gQaY",
+        "rating_mATKGi",
+        "variant_picker_eeW7Eq",
+        "quantity_selector_bJnrRz",
+        "buy_buttons_6XEqpp",
+        "collapsible_text_giTnVY",
+        "collapsible_text_Q3qrbF"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "full_width": true,
+        "product": "carte-de-visite-electonique",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -101,18 +199,17 @@
         "166442457738b23caf-1",
         "166442457738b23caf-2"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "subheading": "",
-        "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "title": "Questions Fréquentes",
+        "content": "",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
+        "support_hours": "",
+        "answer_time": "",
         "button_text": "",
         "button_url": "",
-        "text_position": "start",
+        "text_position": "center",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
@@ -123,10 +220,33 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
+    },
+    "contact_CVVyVz": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "CONTACTEZ-NOUS",
+        "title": "Avez-vous des questions ?",
+        "content": "",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow",
-    "faq"
+    "featured_product_3NJKdP",
+    "faq",
+    "contact_CVVyVz"
   ]
 }
