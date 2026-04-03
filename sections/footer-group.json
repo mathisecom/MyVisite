@@ -59,7 +59,6 @@
         "customer-support",
         "discount"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
@@ -67,7 +66,7 @@
         "heading_tag": "h6",
         "text_alignment": "center",
         "icon_spacing": "small",
-        "background": "",
+        "background": "#f8f8f8",
         "background_gradient": "",
         "text_color": ""
       }
@@ -89,13 +88,13 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": ""
+            "menu_title": "Informations Légales"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
+            "title": "Contactez-Nous",
             "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
             "enable_follow_on_shop": true
           }
