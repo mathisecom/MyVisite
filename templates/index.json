@@ -136,7 +136,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
+            "title": "Détails",
             "content": "<p>Share some content to your customers about your products.</p>",
             "page": ""
           }
@@ -146,7 +146,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
+            "title": "",
             "content": "<p>Share some content to your customers about your products.</p>",
             "page": ""
           }
