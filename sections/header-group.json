@@ -17,13 +17,21 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "Announce something here",
+            "text": "Livraison en 48h OFFERTE & Retour Gratuit",
+            "url": ""
+          }
+        },
+        "message_Tyr8BP": {
+          "type": "message",
+          "settings": {
+            "text": "OFFRE DE LANCEMENT : Économisez 25%",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message"
+        "message",
+        "message_Tyr8BP"
       ],
       "settings": {
         "enable_sticky": false,

@@ -34,6 +34,7 @@
     "heading_letter_spacing": -2,
     "text_font": "inter_n4",
     "heading_apparition": "split_fade",
+    "discount_mode": "percentage",
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "cart_type": "drawer",
