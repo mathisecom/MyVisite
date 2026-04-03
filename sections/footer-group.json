@@ -77,7 +77,8 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "image_width": 150,
+            "image": "shopify://shop_images/Myvisite_b_1.png",
+            "image_width": 160,
             "heading_size": "h3",
             "title": "Newsletter",
             "content": ""

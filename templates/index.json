@@ -233,6 +233,50 @@
         "input_text_color": ""
       }
     },
+    "whyicons_7Gkk4K": {
+      "type": "whyicons",
+      "blocks": {
+        "feature_j8MQqK": {
+          "type": "feature",
+          "settings": {
+            "text": "Powerful on stains, gentle on your budget!"
+          }
+        },
+        "feature_xWmzqn": {
+          "type": "feature",
+          "settings": {
+            "text": "No more messy strips or trays"
+          }
+        },
+        "feature_AGVanp": {
+          "type": "feature",
+          "settings": {
+            "text": "Proven safe & effective"
+          }
+        },
+        "feature_Lz3d67": {
+          "type": "feature",
+          "settings": {
+            "text": "Hassle-free teeth whitening that fits easily into your routine"
+          }
+        }
+      },
+      "block_order": [
+        "feature_j8MQqK",
+        "feature_xWmzqn",
+        "feature_AGVanp",
+        "feature_Lz3d67"
+      ],
+      "name": "Why Smileactives",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Why Smileactives?",
+        "title_color": "#000000",
+        "subtitle": "",
+        "subtitle_color": "#000000",
+        "feature_text_color": "#000000"
+      }
+    },
     "rich_text_Me8kNm": {
       "type": "rich-text",
       "blocks": {
@@ -404,6 +448,7 @@
     "slideshow",
     "logoscroll_tV88GM",
     "featured_product_3NJKdP",
+    "whyicons_7Gkk4K",
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
     "faq",
