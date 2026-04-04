@@ -1,0 +1,253 @@
+{% comment %}
+  Section: NFC Hero - Carte de visite NFC
+  Responsive: Desktop & Mobile
+{% endcomment %}
+
+<section class="nfc-hero" id="nfc-hero-{{ section.id }}">
+  <div class="nfc-hero__inner">
+
+    <!-- Colonne texte -->
+    <div class="nfc-hero__content">
+      <h2 class="nfc-hero__title">{{ section.settings.title }}</h2>
+      <p class="nfc-hero__text">{{ section.settings.text }}</p>
+      <a href="{{ section.settings.button_url }}" class="nfc-hero__btn">
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+
+    <!-- Colonne image -->
+    <div class="nfc-hero__visual">
+      {% if section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 900 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          class="nfc-hero__img"
+          loading="lazy"
+          width="900"
+        >
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'nfc-hero__img nfc-hero__img--placeholder' }}
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ─── Variables ─────────────────────────────────────────── */
+  #nfc-hero-{{ section.id }} {
+    --nfc-bg:         #f0ede8;
+    --nfc-title:      #111827;
+    --nfc-body:       #4b5563;
+    --nfc-btn-bg:     #38d9d9;
+    --nfc-btn-hover:  #22c5c5;
+    --nfc-btn-text:   #ffffff;
+    --nfc-radius:     40px;
+    --nfc-gap:        clamp(2rem, 5vw, 5rem);
+    --nfc-pad-v:      clamp(3rem, 6vw, 5rem);
+    --nfc-pad-h:      clamp(1.5rem, 5vw, 5rem);
+  }
+
+  /* ─── Wrapper ────────────────────────────────────────────── */
+  .nfc-hero {
+    background: var(--nfc-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: clamp(1rem, 3vw, 2.5rem) auto;
+    max-width: 1280px;
+    width: 92%;
+  }
+
+  .nfc-hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--nfc-gap);
+    padding: var(--nfc-pad-v) var(--nfc-pad-h);
+  }
+
+  /* ─── Colonne texte ──────────────────────────────────────── */
+  .nfc-hero__content {
+    flex: 0 1 480px;
+    min-width: 0;
+  }
+
+  .nfc-hero__title {
+    font-family: 'Georgia', serif;
+    font-size: clamp(1.65rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.22;
+    color: var(--nfc-title);
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .nfc-hero__text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(0.9rem, 1.4vw, 1rem);
+    line-height: 1.7;
+    color: var(--nfc-body);
+    margin: 0 0 2rem;
+    max-width: 42ch;
+  }
+
+  /* ─── Bouton ─────────────────────────────────────────────── */
+  .nfc-hero__btn {
+    display: inline-block;
+    background: var(--nfc-btn-bg);
+    color: var(--nfc-btn-text);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: var(--nfc-radius);
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 18px rgba(56, 217, 217, 0.35);
+    white-space: nowrap;
+  }
+
+  .nfc-hero__btn:hover,
+  .nfc-hero__btn:focus-visible {
+    background: var(--nfc-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(56, 217, 217, 0.45);
+    outline: none;
+  }
+
+  .nfc-hero__btn:active {
+    transform: translateY(0);
+  }
+
+  /* ─── Colonne image ──────────────────────────────────────── */
+  .nfc-hero__visual {
+    flex: 0 1 520px;
+    min-width: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .nfc-hero__img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    /* légère élévation pour reproduire l'effet flottant */
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.10));
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+  }
+
+  .nfc-hero__img--placeholder {
+    border-radius: 12px;
+    opacity: 0.4;
+  }
+
+  .nfc-hero__visual:hover .nfc-hero__img {
+    transform: translateY(-6px);
+  }
+
+  /* ─── Responsive Tablet ──────────────────────────────────── */
+  @media (max-width: 900px) {
+    .nfc-hero__inner {
+      gap: 2.5rem;
+    }
+    .nfc-hero__visual {
+      flex: 0 1 380px;
+    }
+  }
+
+  /* ─── Responsive Mobile ──────────────────────────────────── */
+  @media (max-width: 680px) {
+    .nfc-hero {
+      width: 88%;
+      border-radius: 16px;
+      margin: 1.25rem auto;
+    }
+
+    .nfc-hero__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.5rem 1.75rem 0;
+      gap: 2rem;
+    }
+
+    .nfc-hero__content {
+      flex: none;
+      width: 100%;
+    }
+
+    .nfc-hero__title {
+      font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .nfc-hero__text {
+      max-width: 100%;
+      font-size: 0.92rem;
+    }
+
+    .nfc-hero__btn {
+      font-size: 0.9rem;
+      padding: 0.8rem 1.75rem;
+    }
+
+    .nfc-hero__visual {
+      flex: none;
+      width: 100%;
+      justify-content: center;
+      /* L'image dépasse légèrement en bas comme dans le design original */
+      margin-bottom: 0;
+      overflow: visible;
+    }
+
+    .nfc-hero__img {
+      max-width: 90%;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.12));
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "NFC Hero",
+  "tag": "section",
+  "class": "nfc-hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texte descriptif",
+      "default": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton",
+      "default": "Commandez la vôtre !"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (mockups téléphones)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "NFC Hero"
+    }
+  ]
+}
+{% endschema %}
