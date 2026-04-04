@@ -1,0 +1,1044 @@
+{% style %}
+  #shopify-section-{{ section.id }} .mp-why {
+    background: {{ section.settings.section_bg }};
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__container {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding-left: {{ section.settings.side_padding_desktop }}px;
+    padding-right: {{ section.settings.side_padding_desktop }}px;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: center;
+    gap: {{ section.settings.desktop_gap }}px;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__content {
+    max-width: {{ section.settings.content_max_width }}px;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__title {
+    margin: 0 0 {{ section.settings.title_margin_bottom }}px;
+    color: {{ section.settings.title_color }};
+    font-size: {{ section.settings.title_size_desktop }}px;
+    line-height: {{ section.settings.title_line_height_desktop | times: 0.1 }};
+    font-weight: {{ section.settings.title_weight }};
+    letter-spacing: {{ section.settings.title_letter_spacing | times: 0.01 }}em;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__list {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.items_gap_desktop }}px;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__item {
+    display: grid;
+    grid-template-columns: {{ section.settings.icon_box_size }}px 1fr;
+    gap: {{ section.settings.item_inner_gap }}px;
+    align-items: start;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__icon-box {
+    width: {{ section.settings.icon_box_size }}px;
+    height: {{ section.settings.icon_box_size }}px;
+    border-radius: {{ section.settings.icon_box_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__icon {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    display: block;
+    color: currentColor;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__icon-text {
+    font-size: {{ section.settings.icon_text_size }}px;
+    line-height: 1;
+    font-weight: {{ section.settings.icon_text_weight }};
+    color: inherit;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__item-title {
+    margin: 0 0 {{ section.settings.item_title_spacing }}px;
+    color: {{ section.settings.item_title_color }};
+    font-size: {{ section.settings.item_title_size_desktop }}px;
+    line-height: {{ section.settings.item_title_line_height_desktop | times: 0.1 }};
+    font-weight: {{ section.settings.item_title_weight }};
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__item-text {
+    margin: 0;
+    color: {{ section.settings.item_text_color }};
+    font-size: {{ section.settings.item_text_size_desktop }}px;
+    line-height: {{ section.settings.item_text_line_height_desktop | times: 0.1 }};
+    font-weight: {{ section.settings.item_text_weight }};
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__item-text p {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__image-wrap {
+    width: 100%;
+    max-width: {{ section.settings.image_max_width_desktop }}px;
+    transform: translateY({{ section.settings.image_offset_desktop }}px);
+  }
+
+  #shopify-section-{{ section.id }} .mp-why__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .mp-why__container {
+      padding-left: {{ section.settings.side_padding_tablet }}px;
+      padding-right: {{ section.settings.side_padding_tablet }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__grid {
+      grid-template-columns: 1fr;
+      gap: {{ section.settings.tablet_gap }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__content {
+      max-width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__title {
+      font-size: {{ section.settings.title_size_tablet }}px;
+      line-height: {{ section.settings.title_line_height_tablet | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__list {
+      gap: {{ section.settings.items_gap_tablet }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__item-title {
+      font-size: {{ section.settings.item_title_size_tablet }}px;
+      line-height: {{ section.settings.item_title_line_height_tablet | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__item-text {
+      font-size: {{ section.settings.item_text_size_tablet }}px;
+      line-height: {{ section.settings.item_text_line_height_tablet | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__image-wrap {
+      max-width: {{ section.settings.image_max_width_tablet }}px;
+      transform: translateY({{ section.settings.image_offset_tablet }}px);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    #shopify-section-{{ section.id }} .mp-why {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__container {
+      padding-left: {{ section.settings.side_padding_mobile }}px;
+      padding-right: {{ section.settings.side_padding_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__grid {
+      gap: {{ section.settings.mobile_gap }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__title {
+      margin-bottom: {{ section.settings.title_margin_bottom_mobile }}px;
+      font-size: {{ section.settings.title_size_mobile }}px;
+      line-height: {{ section.settings.title_line_height_mobile | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__list {
+      gap: {{ section.settings.items_gap_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__item {
+      grid-template-columns: {{ section.settings.icon_box_size_mobile }}px 1fr;
+      gap: {{ section.settings.item_inner_gap_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__icon-box {
+      width: {{ section.settings.icon_box_size_mobile }}px;
+      height: {{ section.settings.icon_box_size_mobile }}px;
+      border-radius: {{ section.settings.icon_box_radius_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__icon {
+      width: {{ section.settings.icon_size_mobile }}px;
+      height: {{ section.settings.icon_size_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__icon-text {
+      font-size: {{ section.settings.icon_text_size_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__item-title {
+      margin-bottom: {{ section.settings.item_title_spacing_mobile }}px;
+      font-size: {{ section.settings.item_title_size_mobile }}px;
+      line-height: {{ section.settings.item_title_line_height_mobile | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__item-text {
+      font-size: {{ section.settings.item_text_size_mobile }}px;
+      line-height: {{ section.settings.item_text_line_height_mobile | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__media {
+      order: 2;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__image-wrap {
+      max-width: {{ section.settings.image_max_width_mobile }}px;
+      transform: translateY({{ section.settings.image_offset_mobile }}px);
+      margin: 0 auto;
+    }
+
+    #shopify-section-{{ section.id }} .mp-why__content {
+      order: 1;
+    }
+  }
+{% endstyle %}
+
+<section class="mp-why">
+  <div class="mp-why__container">
+    <div class="mp-why__grid">
+      <div class="mp-why__content">
+        {% if section.settings.heading != blank %}
+          <h2 class="mp-why__title">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        <div class="mp-why__list">
+          {% for block in section.blocks %}
+            <div class="mp-why__item" {{ block.shopify_attributes }}>
+              <div class="mp-why__icon-box" style="background: {{ block.settings.icon_bg }}; color: {{ block.settings.icon_color }};">
+                {% case block.settings.icon %}
+                  {% when 'check' %}
+                    <svg class="mp-why__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12.5L9.2 16.5L19 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  {% when 'flash' %}
+                    <svg class="mp-why__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M13 2L5 13H11L10 22L19 10H13L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  {% when 'clock' %}
+                    <svg class="mp-why__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+                      <path d="M12 7.5V12L15.5 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  {% when 'text' %}
+                    <span class="mp-why__icon-text">{{ block.settings.custom_icon_text }}</span>
+                {% endcase %}
+              </div>
+
+              <div class="mp-why__item-content">
+                {% if block.settings.title != blank %}
+                  <h3 class="mp-why__item-title">{{ block.settings.title }}</h3>
+                {% endif %}
+
+                {% if block.settings.text != blank %}
+                  <div class="mp-why__item-text">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="mp-why__media">
+        <div class="mp-why__image-wrap">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: 1200
+              | image_tag:
+                class: 'mp-why__image',
+                loading: 'lazy',
+                widths: '400, 600, 800, 1000, 1200',
+                sizes: '(max-width: 767px) 80vw, (max-width: 989px) 60vw, 40vw'
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'mp-why__image' }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pourquoi choisir",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Contenu"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "default": "Pourquoi choisir MediaPush ?"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image à droite"
+    },
+
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Fond de section",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur titre",
+      "default": "#081b3a"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Couleur titre avantage",
+      "default": "#081b3a"
+    },
+    {
+      "type": "color",
+      "id": "item_text_color",
+      "label": "Couleur texte avantage",
+      "default": "#45556c"
+    },
+
+    {
+      "type": "header",
+      "content": "Largeur & espacements section"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 900,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "label": "Largeur maximale",
+      "default": 1500
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Largeur max colonne texte",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "desktop_gap",
+      "min": 20,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Espace colonnes desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "tablet_gap",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espace colonnes tablette",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace colonnes mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "side_padding_desktop",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge latérale desktop",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "side_padding_tablet",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge latérale tablette",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "side_padding_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge latérale mobile",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 180,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding haut desktop",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 180,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bas desktop",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding haut mobile",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bas mobile",
+      "default": 42
+    },
+
+    {
+      "type": "header",
+      "content": "Titre principal"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "min": 20,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre desktop",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "title_size_tablet",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre tablette",
+      "default": 34
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 18,
+      "max": 42,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre mobile",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_desktop",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre desktop (x10)",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_tablet",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre tablette (x10)",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre mobile (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "title_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse titre",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_letter_spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "label": "Espacement lettres titre (x100)",
+      "default": -3
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace sous titre desktop",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace sous titre mobile",
+      "default": 22
+    },
+
+    {
+      "type": "header",
+      "content": "Liste avantages"
+    },
+    {
+      "type": "range",
+      "id": "items_gap_desktop",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre avantages desktop",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "items_gap_tablet",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre avantages tablette",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "items_gap_mobile",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre avantages mobile",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_inner_gap",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace icône / texte desktop",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_inner_gap_mobile",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace icône / texte mobile",
+      "default": 14
+    },
+
+    {
+      "type": "header",
+      "content": "Icônes"
+    },
+    {
+      "type": "range",
+      "id": "icon_box_size",
+      "min": 36,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille fond icône desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "icon_box_size_mobile",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille fond icône mobile",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "icon_box_radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi fond icône desktop",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "icon_box_radius_mobile",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi fond icône mobile",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille icône desktop",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "min": 14,
+      "max": 34,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille icône mobile",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_text_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte icône desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "icon_text_size_mobile",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte icône mobile",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_text_weight",
+      "min": 400,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse texte icône",
+      "default": 700
+    },
+
+    {
+      "type": "header",
+      "content": "Titres avantages"
+    },
+    {
+      "type": "range",
+      "id": "item_title_size_desktop",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre avantage desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_title_size_tablet",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre avantage tablette",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_title_size_mobile",
+      "min": 14,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre avantage mobile",
+      "default": 17
+    },
+    {
+      "type": "range",
+      "id": "item_title_line_height_desktop",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre avantage desktop (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_title_line_height_tablet",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre avantage tablette (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_title_line_height_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "label": "Interligne titre avantage mobile (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_title_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse titre avantage",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "item_title_spacing",
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous titre avantage desktop",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "item_title_spacing_mobile",
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous titre avantage mobile",
+      "default": 5
+    },
+
+    {
+      "type": "header",
+      "content": "Textes avantages"
+    },
+    {
+      "type": "range",
+      "id": "item_text_size_desktop",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte avantage desktop",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_text_size_tablet",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte avantage tablette",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_text_size_mobile",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte avantage mobile",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_text_line_height_desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte avantage desktop (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_text_line_height_tablet",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte avantage tablette (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_text_line_height_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte avantage mobile (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_text_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse texte avantage",
+      "default": 400
+    },
+
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_max_width_desktop",
+      "min": 220,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "label": "Largeur image desktop",
+      "default": 460
+    },
+    {
+      "type": "range",
+      "id": "image_max_width_tablet",
+      "min": 220,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Largeur image tablette",
+      "default": 380
+    },
+    {
+      "type": "range",
+      "id": "image_max_width_mobile",
+      "min": 180,
+      "max": 420,
+      "step": 10,
+      "unit": "px",
+      "label": "Largeur image mobile",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "image_offset_desktop",
+      "min": -80,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Décalage vertical image desktop",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_offset_tablet",
+      "min": -80,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Décalage vertical image tablette",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_offset_mobile",
+      "min": -80,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Décalage vertical image mobile",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "advantage",
+      "name": "Avantage",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icône",
+          "default": "check",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "flash", "label": "Éclair" },
+            { "value": "clock", "label": "Horloge" },
+            { "value": "text", "label": "Texte personnalisé" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "custom_icon_text",
+          "label": "Texte icône personnalisé",
+          "default": "FR"
+        },
+        {
+          "type": "color",
+          "id": "icon_bg",
+          "label": "Fond icône",
+          "default": "#d8f0dd"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Couleur icône",
+          "default": "#1e9c46"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre avantage",
+          "default": "Titre avantage"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte avantage",
+          "default": "<p>Votre texte ici.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pourquoi choisir",
+      "blocks": [
+        {
+          "type": "advantage",
+          "settings": {
+            "icon": "check",
+            "icon_bg": "#d8f0dd",
+            "icon_color": "#1e9c46",
+            "title": "Plus d'avis Google",
+            "text": "<p>Multipliez par 5 le nombre d'avis sur votre fiche Google grâce à nos plaques NFC.</p>"
+          }
+        },
+        {
+          "type": "advantage",
+          "settings": {
+            "icon": "flash",
+            "icon_bg": "#dbe7ff",
+            "icon_color": "#2a66ff",
+            "title": "Installation instantanée",
+            "text": "<p>Collez la plaque et c'est prêt ! Aucune configuration technique requise.</p>"
+          }
+        },
+        {
+          "type": "advantage",
+          "settings": {
+            "icon": "clock",
+            "icon_bg": "#ebdefe",
+            "icon_color": "#8a3ffc",
+            "title": "Utilisable à vie",
+            "text": "<p>Pas d'abonnement, pas de frais cachés. Une fois achetée, elle est à vous pour toujours.</p>"
+          }
+        },
+        {
+          "type": "advantage",
+          "settings": {
+            "icon": "text",
+            "custom_icon_text": "FR",
+            "icon_bg": "#f3e5ae",
+            "icon_color": "#1f2937",
+            "title": "Fabriqué en France",
+            "text": "<p>Qualité premium, production locale et livraison rapide garantie.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
