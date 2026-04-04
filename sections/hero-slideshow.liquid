@@ -19,7 +19,8 @@
     --vhero-badge-text:    {{ section.settings.badge_text_color }};
     --vhero-badge-icon:    {{ section.settings.badge_icon_color }};
     --vhero-title-color:   {{ section.settings.title_color }};
-    --vhero-title-size:    {{ section.settings.title_size }}px;
+    --vhero-title-size:        {{ section.settings.title_size }}px;
+    --vhero-title-size-mobile: {{ section.settings.title_size_mobile }}px;
     --vhero-underline:     {{ section.settings.underline_color }};
     --vhero-body-color:    {{ section.settings.body_color }};
     --vhero-body-size:     {{ section.settings.body_size }}px;
@@ -28,7 +29,8 @@
     --vhero-btn1-text:     {{ section.settings.btn1_text_color }};
     --vhero-btn2-text:     {{ section.settings.btn2_text_color }};
     --vhero-btn2-hover:    {{ section.settings.btn2_hover_color }};
-    --vhero-section-pad:   {{ section.settings.section_padding }}px;
+    --vhero-pad-top:       {{ section.settings.padding_top }}px;
+    --vhero-pad-bottom:    {{ section.settings.padding_bottom }}px;
   "
 >
   <div class="vhero__wrap">
@@ -38,7 +40,7 @@
 
       {% if section.settings.badge_text != blank %}
         <p class="vhero__badge">
-          <span class="vhero__badge-icon">⚡</span>
+          <span class="vhero__badge-icon">{{ section.settings.badge_icon }}</span>
           {{ section.settings.badge_text }}
         </p>
       {% endif %}
@@ -95,7 +97,8 @@
 
 #vhero-{{ section.id }} {
   background-color: var(--vhero-bg);
-  padding: var(--vhero-section-pad) 0;
+  padding-top: var(--vhero-pad-top);
+  padding-bottom: var(--vhero-pad-bottom);
   overflow: hidden;
 }
 
@@ -285,7 +288,7 @@
   }
 
   #vhero-{{ section.id }} .vhero__title {
-    font-size: clamp(2rem, 9vw, 2.6rem);
+    font-size: var(--vhero-title-size-mobile);
     margin-bottom: 1.2rem;
   }
 
@@ -338,12 +341,22 @@
     },
     {
       "type": "range",
-      "id": "section_padding",
+      "id": "padding_top",
       "min": 0,
-      "max": 148,
-      "step": 4,
+      "max": 150,
+      "step": 2,
       "unit": "px",
-      "label": "Espacement vertical de la section",
+      "label": "Espacement dessus (padding top)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessous (padding bottom)",
       "default": 60
     },
 
@@ -356,6 +369,13 @@
       "id": "badge_text",
       "label": "Texte du badge",
       "default": "Boostez votre e-réputation"
+    },
+    {
+      "type": "text",
+      "id": "badge_icon",
+      "label": "Icône du badge (emoji ou texte)",
+      "info": "Colle n'importe quel emoji : ⚡ 🚀 ✅ ⭐ 🔥 💡 🎯 …",
+      "default": "⚡"
     },
     {
       "type": "color",
@@ -402,6 +422,16 @@
       "unit": "px",
       "label": "Taille du titre (desktop)",
       "default": 60
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille du titre (mobile)",
+      "default": 36
     },
     {
       "type": "color",
