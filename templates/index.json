@@ -384,6 +384,98 @@
         "input_text_color": ""
       }
     },
+    "logoscroll_gYg9zF": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_CpGhM8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/castorama.png",
+            "url": ""
+          }
+        },
+        "image_V4intX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/points.png",
+            "url": ""
+          }
+        },
+        "image_PEKhx3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/decathlon.png",
+            "url": ""
+          }
+        },
+        "image_MQtzNa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/alinea.png",
+            "url": ""
+          }
+        },
+        "image_DYLdVV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sfr.png",
+            "url": ""
+          }
+        },
+        "image_BtDRYD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/general-doptique.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_CpGhM8",
+        "image_V4intX",
+        "image_PEKhx3",
+        "image_MQtzNa",
+        "image_DYLdVV",
+        "image_BtDRYD"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "<p>ILS NOUS FONT CONFIANCE</p>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 12,
+        "heading_size_mobile": 7,
+        "heading_height": 130,
+        "scrolling_velocity": 26,
+        "scrolling_velocity_mobile": 22,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 44,
+        "scrolling_gap_mobile": 26,
+        "card_width_desktop": 150,
+        "card_width_mobile": 120,
+        "heading_color": "#121212",
+        "layout_bg_color": "#ffffff",
+        "layout_border_color": "#121212",
+        "background_color": "#ffffff",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "rich_text_Me8kNm": {
       "type": "rich-text",
       "blocks": {
@@ -754,6 +846,7 @@
     "beneficeicons_tMxgAX",
     "mediasection_fVWwPj",
     "featured_product_3NJKdP",
+    "logoscroll_gYg9zF",
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
     "benefice_icons_Rky4jM",
