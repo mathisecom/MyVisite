@@ -1,118 +1,169 @@
-{% stylesheet %}
-  .qb-benefits-section {
-    background: #ffffff;
-    padding: 48px 20px;
+{% style %}
+  #shopify-section-{{ section.id }} .qb-benefits-section {
+    background: {{ section.settings.section_bg }};
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
   }
 
-  .qb-benefits-wrapper {
-    max-width: 1600px;
+  #shopify-section-{{ section.id }} .qb-benefits-wrapper {
+    max-width: {{ section.settings.max_width }}px;
     margin: 0 auto;
+    padding-left: {{ section.settings.side_padding_desktop }}px;
+    padding-right: {{ section.settings.side_padding_desktop }}px;
   }
 
-  .qb-benefits-grid {
+  #shopify-section-{{ section.id }} .qb-benefits-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr));
+    gap: {{ section.settings.gap_desktop }}px;
   }
 
-  .qb-benefit-card {
-    background: #f5f5f5;
-    border-radius: 18px;
-    padding: 40px 40px 36px;
-    min-height: 300px;
+  #shopify-section-{{ section.id }} .qb-benefit-card {
+    background: {{ section.settings.card_bg }};
+    border-radius: {{ section.settings.card_radius }}px;
+    padding: {{ section.settings.card_padding_vertical_desktop }}px {{ section.settings.card_padding_horizontal_desktop }}px;
+    min-height: {{ section.settings.card_min_height_desktop }}px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-sizing: border-box;
   }
 
-  .qb-benefit-icon-box {
-    width: 64px;
-    height: 64px;
-    border-radius: 14px;
-    background: #ffffff;
+  #shopify-section-{{ section.id }} .qb-benefit-icon-box {
+    width: {{ section.settings.icon_box_size }}px;
+    height: {{ section.settings.icon_box_size }}px;
+    border-radius: {{ section.settings.icon_box_radius }}px;
+    background: {{ section.settings.icon_box_bg }};
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 26px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
-  }
-
-  .qb-benefit-icon {
-    width: 28px;
-    height: 28px;
-    color: #d61f93;
+    margin-bottom: {{ section.settings.icon_spacing_bottom }}px;
     flex-shrink: 0;
   }
 
-  .qb-benefit-title {
-    margin: 0 0 14px;
-    font-size: 22px;
-    line-height: 1.15;
-    font-weight: 700;
-    color: #061a2f;
-    letter-spacing: -0.02em;
+  #shopify-section-{{ section.id }} .qb-benefit-icon {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    color: {{ section.settings.icon_color }};
+    flex-shrink: 0;
   }
 
-  .qb-benefit-text {
+  #shopify-section-{{ section.id }} .qb-benefit-title {
+    margin: 0 0 {{ section.settings.title_spacing_bottom }}px;
+    font-size: {{ section.settings.title_size_desktop }}px;
+    line-height: {{ section.settings.title_line_height_desktop | times: 0.1 }};
+    font-weight: {{ section.settings.title_weight }};
+    color: {{ section.settings.title_color }};
+    letter-spacing: {{ section.settings.title_letter_spacing | times: 0.01 }}em;
+  }
+
+  #shopify-section-{{ section.id }} .qb-benefit-text {
     margin: 0;
-    font-size: 17px;
-    line-height: 1.45;
-    color: #59697c;
+    font-size: {{ section.settings.text_size_desktop }}px;
+    line-height: {{ section.settings.text_line_height_desktop | times: 0.1 }};
+    color: {{ section.settings.text_color }};
   }
 
-  .qb-benefit-text strong {
-    color: #3b4b5d;
-    font-weight: 700;
+  #shopify-section-{{ section.id }} .qb-benefit-text p {
+    margin: 0;
   }
 
-  @media screen and (max-width: 1200px) {
-    .qb-benefits-grid {
-      grid-template-columns: repeat(2, 1fr);
+  #shopify-section-{{ section.id }} .qb-benefit-text strong {
+    color: {{ section.settings.bold_color }};
+    font-weight: {{ section.settings.bold_weight }};
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .qb-benefits-wrapper {
+      padding-left: {{ section.settings.side_padding_tablet }}px;
+      padding-right: {{ section.settings.side_padding_tablet }}px;
     }
 
-    .qb-benefit-card {
-      min-height: auto;
+    #shopify-section-{{ section.id }} .qb-benefits-grid {
+      grid-template-columns: repeat({{ section.settings.columns_tablet }}, minmax(0, 1fr));
+      gap: {{ section.settings.gap_tablet }}px;
+    }
+
+    #shopify-section-{{ section.id }} .qb-benefit-card {
+      min-height: {{ section.settings.card_min_height_tablet }}px;
+      padding: {{ section.settings.card_padding_vertical_tablet }}px {{ section.settings.card_padding_horizontal_tablet }}px;
+    }
+
+    #shopify-section-{{ section.id }} .qb-benefit-title {
+      font-size: {{ section.settings.title_size_tablet }}px;
+      line-height: {{ section.settings.title_line_height_tablet | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .qb-benefit-text {
+      font-size: {{ section.settings.text_size_tablet }}px;
+      line-height: {{ section.settings.text_line_height_tablet | times: 0.1 }};
     }
   }
 
   @media screen and (max-width: 767px) {
-    .qb-benefits-section {
-      padding: 32px 16px;
+    #shopify-section-{{ section.id }} .qb-benefits-section {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      overflow: hidden;
     }
 
-    .qb-benefits-wrapper {
+    #shopify-section-{{ section.id }} .qb-benefits-wrapper {
       max-width: 100%;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    .qb-benefits-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
+    #shopify-section-{{ section.id }} .qb-benefits-grid {
+      display: flex;
+      gap: {{ section.settings.gap_mobile }}px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-left: 0;
+      padding-right: 0;
+      scrollbar-width: none;
     }
 
-    .qb-benefit-card {
-      padding: 28px 22px;
-      border-radius: 18px;
-      min-height: auto;
+    #shopify-section-{{ section.id }} .qb-benefits-grid::-webkit-scrollbar {
+      display: none;
     }
 
-    .qb-benefit-icon-box {
-      width: 58px;
-      height: 58px;
-      margin-bottom: 22px;
+    #shopify-section-{{ section.id }} .qb-benefit-card {
+      flex: 0 0 {{ section.settings.mobile_card_width }}%;
+      width: {{ section.settings.mobile_card_width }}%;
+      min-width: {{ section.settings.mobile_card_width }}%;
+      scroll-snap-align: start;
+      border-radius: {{ section.settings.card_radius_mobile }}px;
+      min-height: {{ section.settings.card_min_height_mobile }}px;
+      padding: {{ section.settings.card_padding_vertical_mobile }}px {{ section.settings.card_padding_horizontal_mobile }}px;
     }
 
-    .qb-benefit-title {
-      font-size: 17px;
-      line-height: 1.2;
-      margin-bottom: 12px;
+    #shopify-section-{{ section.id }} .qb-benefit-icon-box {
+      width: {{ section.settings.icon_box_size_mobile }}px;
+      height: {{ section.settings.icon_box_size_mobile }}px;
+      border-radius: {{ section.settings.icon_box_radius_mobile }}px;
+      margin-bottom: {{ section.settings.icon_spacing_bottom_mobile }}px;
     }
 
-    .qb-benefit-text {
-      font-size: 15px;
-      line-height: 1.5;
+    #shopify-section-{{ section.id }} .qb-benefit-icon {
+      width: {{ section.settings.icon_size_mobile }}px;
+      height: {{ section.settings.icon_size_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .qb-benefit-title {
+      margin-bottom: {{ section.settings.title_spacing_bottom_mobile }}px;
+      font-size: {{ section.settings.title_size_mobile }}px;
+      line-height: {{ section.settings.title_line_height_mobile | times: 0.1 }};
+    }
+
+    #shopify-section-{{ section.id }} .qb-benefit-text {
+      font-size: {{ section.settings.text_size_mobile }}px;
+      line-height: {{ section.settings.text_line_height_mobile | times: 0.1 }};
     }
   }
-{% endstylesheet %}
+{% endstyle %}
 
 <section class="qb-benefits-section">
   <div class="qb-benefits-wrapper">
@@ -165,11 +216,561 @@
 
 {% schema %}
 {
-  "name": "Cartes bénéfices",
+  "name": "Cartes bénéfices slider",
   "tag": "section",
   "class": "section",
-  "max_blocks": 8,
-  "settings": [],
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "label": "Largeur maximale",
+      "default": 1600
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Colonnes desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Colonnes tablette",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "min": 70,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Largeur des cartes mobile",
+      "default": 85
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre les cartes desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "gap_tablet",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre les cartes tablette",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Espace entre les cartes mobile",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Espacement section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding haut desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bas desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding haut mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bas mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "side_padding_desktop",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge latérale desktop",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "side_padding_tablet",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge latérale tablette",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Fond de section",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Fond des cartes",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "icon_box_bg",
+      "label": "Fond du bloc icône",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Couleur icône",
+      "default": "#d61f93"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur titre",
+      "default": "#061a2f"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur texte",
+      "default": "#59697c"
+    },
+    {
+      "type": "color",
+      "id": "bold_color",
+      "label": "Couleur texte en gras",
+      "default": "#3b4b5d"
+    },
+    {
+      "type": "header",
+      "content": "Cartes"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi cartes desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "card_radius_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi cartes mobile",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "card_padding_horizontal_desktop",
+      "min": 8,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding horizontal carte desktop",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "card_padding_vertical_desktop",
+      "min": 8,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding vertical carte desktop",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "card_padding_horizontal_tablet",
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding horizontal carte tablette",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "card_padding_vertical_tablet",
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding vertical carte tablette",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "card_padding_horizontal_mobile",
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding horizontal carte mobile",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "card_padding_vertical_mobile",
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding vertical carte mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_min_height_desktop",
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Hauteur mini carte desktop",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "card_min_height_tablet",
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Hauteur mini carte tablette",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "card_min_height_mobile",
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Hauteur mini carte mobile",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Icônes"
+    },
+    {
+      "type": "range",
+      "id": "icon_box_size",
+      "min": 30,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille fond icône desktop",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "icon_box_size_mobile",
+      "min": 30,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille fond icône mobile",
+      "default": 58
+    },
+    {
+      "type": "range",
+      "id": "icon_box_radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi fond icône desktop",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_box_radius_mobile",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi fond icône mobile",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille icône desktop",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "min": 12,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille icône mobile",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "icon_spacing_bottom",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous icône desktop",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "icon_spacing_bottom_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous icône mobile",
+      "default": 22
+    },
+    {
+      "type": "header",
+      "content": "Titre"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "min": 12,
+      "max": 42,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre desktop",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "title_size_tablet",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre tablette",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille titre mobile",
+      "default": 17
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "label": "Interligne titre desktop (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_tablet",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "label": "Interligne titre tablette (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "title_line_height_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "label": "Interligne titre mobile (x10)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "title_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse titre",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_spacing_bottom",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous titre desktop",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "title_spacing_bottom_mobile",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Espace sous titre mobile",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "title_letter_spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "label": "Espacement lettres titre (x100)",
+      "default": -2
+    },
+    {
+      "type": "header",
+      "content": "Texte"
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte desktop",
+      "default": 17
+    },
+    {
+      "type": "range",
+      "id": "text_size_tablet",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte tablette",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte mobile",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_line_height_desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte desktop (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_line_height_tablet",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte tablette (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_line_height_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "label": "Interligne texte mobile (x10)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "bold_weight",
+      "min": 400,
+      "max": 900,
+      "step": 100,
+      "label": "Graisse texte en gras",
+      "default": 700
+    }
+  ],
   "blocks": [
     {
       "type": "benefit",
@@ -204,7 +805,7 @@
   ],
   "presets": [
     {
-      "name": "Cartes bénéfices",
+      "name": "Cartes bénéfices slider",
       "blocks": [
         {
           "type": "benefit",
@@ -235,7 +836,7 @@
           "settings": {
             "icon": "bars",
             "title": "Des résultats visibles",
-            "text": "<p>Suivez votre collecte d’avis, votre <strong>visibilité</strong> sur Google et votre <strong>performance</strong> depuis avec notre app sur le web ou sur votre mobile.</p>"
+            "text": "<p>Suivez votre collecte d’avis, votre <strong>visibilité</strong> sur Google et votre <strong>performance</strong> depuis notre app sur le web ou sur votre mobile.</p>"
           }
         }
       ]
