@@ -55,24 +55,42 @@
         "image_Cd6Lth": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/castorama.png",
             "url": ""
           }
         },
         "image_rWGmNG": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/points.png",
             "url": ""
           }
         },
         "image_JcDbcf": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/decathlon.png",
             "url": ""
           }
         },
         "image_Jkp6UN": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/alinea.png",
+            "url": ""
+          }
+        },
+        "image_q7cDVt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sfr.png",
+            "url": ""
+          }
+        },
+        "image_7iCtMp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/general-doptique.png",
             "url": ""
           }
         }
@@ -81,7 +99,9 @@
         "image_Cd6Lth",
         "image_rWGmNG",
         "image_JcDbcf",
-        "image_Jkp6UN"
+        "image_Jkp6UN",
+        "image_q7cDVt",
+        "image_7iCtMp"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
