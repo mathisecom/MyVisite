@@ -29,8 +29,10 @@
     --vhero-btn1-text:     {{ section.settings.btn1_text_color }};
     --vhero-btn2-text:     {{ section.settings.btn2_text_color }};
     --vhero-btn2-hover:    {{ section.settings.btn2_hover_color }};
-    --vhero-pad-top:       {{ section.settings.padding_top }}px;
-    --vhero-pad-bottom:    {{ section.settings.padding_bottom }}px;
+    --vhero-pad-top:          {{ section.settings.padding_top }}px;
+    --vhero-pad-bottom:       {{ section.settings.padding_bottom }}px;
+    --vhero-pad-top-mobile:   {{ section.settings.padding_top_mobile }}px;
+    --vhero-pad-bottom-mobile:{{ section.settings.padding_bottom_mobile }}px;
   "
 >
   <div class="vhero__wrap">
@@ -272,7 +274,8 @@
 /* ════════════════ RESPONSIVE MOBILE ════════════════ */
 @media (max-width: 680px) {
   #vhero-{{ section.id }} {
-    padding: 2.5rem 0 0;
+    padding-top: var(--vhero-pad-top-mobile);
+    padding-bottom: var(--vhero-pad-bottom-mobile);
   }
 
   #vhero-{{ section.id }} .vhero__wrap {
@@ -358,6 +361,26 @@
       "unit": "px",
       "label": "Espacement dessous (padding bottom)",
       "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessus — mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessous — mobile",
+      "default": 0
     },
 
     {
