@@ -1,0 +1,519 @@
+{% comment %}
+  Section: Hero Avis Google — Viewup style
+  Responsive Desktop & Mobile — 100% personnalisable via le Customizer
+{% endcomment %}
+
+{%- liquid
+  assign title_parts = section.settings.title | split: '||'
+  assign title_before  = title_parts[0]
+  assign title_under   = title_parts[1]
+  assign title_after   = title_parts[2]
+-%}
+
+<section
+  class="vhero"
+  id="vhero-{{ section.id }}"
+  style="
+    --vhero-bg:            {{ section.settings.bg_color }};
+    --vhero-badge-bg:      {{ section.settings.badge_bg }};
+    --vhero-badge-text:    {{ section.settings.badge_text_color }};
+    --vhero-badge-icon:    {{ section.settings.badge_icon_color }};
+    --vhero-title-color:   {{ section.settings.title_color }};
+    --vhero-title-size:    {{ section.settings.title_size }}px;
+    --vhero-underline:     {{ section.settings.underline_color }};
+    --vhero-body-color:    {{ section.settings.body_color }};
+    --vhero-body-size:     {{ section.settings.body_size }}px;
+    --vhero-btn1-bg:       {{ section.settings.btn1_bg }};
+    --vhero-btn1-bg-hover: {{ section.settings.btn1_bg_hover }};
+    --vhero-btn1-text:     {{ section.settings.btn1_text_color }};
+    --vhero-btn2-text:     {{ section.settings.btn2_text_color }};
+    --vhero-btn2-hover:    {{ section.settings.btn2_hover_color }};
+    --vhero-section-pad:   {{ section.settings.section_padding }}px;
+  "
+>
+  <div class="vhero__wrap">
+
+    <!-- ── Colonne texte ── -->
+    <div class="vhero__content">
+
+      {% if section.settings.badge_text != blank %}
+        <p class="vhero__badge">
+          <span class="vhero__badge-icon">⚡</span>
+          {{ section.settings.badge_text }}
+        </p>
+      {% endif %}
+
+      <h1 class="vhero__title">
+        {%- if title_parts.size > 1 -%}
+          {{- title_before -}}<span class="vhero__underline">{{- title_under -}}</span>{{- title_after -}}
+        {%- else -%}
+          {{ section.settings.title }}
+        {%- endif -%}
+      </h1>
+
+      {% if section.settings.body_text != blank %}
+        <p class="vhero__body">{{ section.settings.body_text }}</p>
+      {% endif %}
+
+      <div class="vhero__actions">
+        {% if section.settings.btn1_label != blank %}
+          <a href="{{ section.settings.btn1_url }}" class="vhero__btn-primary">
+            {{ section.settings.btn1_label }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.btn2_label != blank %}
+          <a href="{{ section.settings.btn2_url }}" class="vhero__btn-link">
+            {{ section.settings.btn2_label }}
+            <span class="vhero__arrow" aria-hidden="true">↗</span>
+          </a>
+        {% endif %}
+      </div>
+
+    </div>
+
+    <!-- ── Colonne image ── -->
+    {% if section.settings.image != blank %}
+      <div class="vhero__visual">
+        <img
+          src="{{ section.settings.image | image_url: width: 900 }}"
+          alt="{{ section.settings.image.alt | default: section.settings.title | escape }}"
+          class="vhero__img"
+          loading="lazy"
+          width="900"
+        >
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+/* ════════════════════════════════════════════
+   HERO AVIS GOOGLE — styles isolés par ID
+   ════════════════════════════════════════════ */
+
+#vhero-{{ section.id }} {
+  background-color: var(--vhero-bg);
+  padding: var(--vhero-section-pad) 0;
+  overflow: hidden;
+}
+
+/* ── Wrapper ── */
+#vhero-{{ section.id }} .vhero__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 5vw, 5rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 5rem);
+}
+
+/* ── Colonne texte ── */
+#vhero-{{ section.id }} .vhero__content {
+  flex: 0 1 580px;
+  min-width: 0;
+}
+
+/* ── Badge ── */
+#vhero-{{ section.id }} .vhero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--vhero-badge-bg);
+  color: var(--vhero-badge-text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem 0.3rem 0.55rem;
+  border-radius: 999px;
+  margin: 0 0 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+#vhero-{{ section.id }} .vhero__badge-icon {
+  color: var(--vhero-badge-icon);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* ── Titre ── */
+#vhero-{{ section.id }} .vhero__title {
+  font-size: var(--vhero-title-size);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--vhero-title-color);
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.03em;
+  font-family: inherit;
+}
+
+/* ── Mot souligné ── */
+#vhero-{{ section.id }} .vhero__underline {
+  position: relative;
+  display: inline;
+  white-space: nowrap;
+}
+
+#vhero-{{ section.id }} .vhero__underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 5px;
+  background: var(--vhero-underline);
+  border-radius: 3px;
+}
+
+/* ── Corps ── */
+#vhero-{{ section.id }} .vhero__body {
+  font-size: var(--vhero-body-size);
+  line-height: 1.7;
+  color: var(--vhero-body-color);
+  margin: 0 0 2.25rem;
+  max-width: 52ch;
+}
+
+/* ── Actions ── */
+#vhero-{{ section.id }} .vhero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+}
+
+/* Bouton principal */
+#vhero-{{ section.id }} .vhero__btn-primary {
+  display: inline-block;
+  background: var(--vhero-btn1-bg);
+  color: var(--vhero-btn1-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--vhero-btn1-bg) 45%, transparent);
+  white-space: nowrap;
+}
+
+#vhero-{{ section.id }} .vhero__btn-primary:hover,
+#vhero-{{ section.id }} .vhero__btn-primary:focus-visible {
+  background: var(--vhero-btn1-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--vhero-btn1-bg) 55%, transparent);
+  outline: none;
+}
+
+#vhero-{{ section.id }} .vhero__btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Lien secondaire */
+#vhero-{{ section.id }} .vhero__btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--vhero-btn2-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+#vhero-{{ section.id }} .vhero__btn-link:hover,
+#vhero-{{ section.id }} .vhero__btn-link:focus-visible {
+  color: var(--vhero-btn2-hover);
+  gap: 0.55rem;
+  outline: none;
+}
+
+#vhero-{{ section.id }} .vhero__arrow {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+#vhero-{{ section.id }} .vhero__btn-link:hover .vhero__arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ── Colonne image ── */
+#vhero-{{ section.id }} .vhero__visual {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+#vhero-{{ section.id }} .vhero__img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ════════════════ RESPONSIVE TABLET ════════════════ */
+@media (max-width: 960px) {
+  #vhero-{{ section.id }} .vhero__title {
+    font-size: calc(var(--vhero-title-size) * 0.82);
+  }
+  #vhero-{{ section.id }} .vhero__visual {
+    flex: 0 1 42%;
+  }
+}
+
+/* ════════════════ RESPONSIVE MOBILE ════════════════ */
+@media (max-width: 680px) {
+  #vhero-{{ section.id }} {
+    padding: 2.5rem 0 0;
+  }
+
+  #vhero-{{ section.id }} .vhero__wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__content {
+    flex: none;
+    width: 100%;
+  }
+
+  #vhero-{{ section.id }} .vhero__title {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    margin-bottom: 1.2rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__body {
+    max-width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__btn-primary {
+    font-size: 0.92rem;
+    padding: 0.85rem 1.75rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__visual {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    padding: 0 0.5rem;
+  }
+
+  #vhero-{{ section.id }} .vhero__img {
+    max-width: 100%;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Hero Avis Google",
+  "tag": "section",
+  "class": "vhero-section",
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "🎨 Couleurs générales"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacement vertical de la section",
+      "default": 60
+    },
+
+    {
+      "type": "header",
+      "content": "⚡ Badge"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Texte du badge",
+      "default": "Boostez votre e-réputation"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Fond du badge",
+      "default": "#fff0f5"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Couleur du texte du badge",
+      "default": "#1a1a2e"
+    },
+    {
+      "type": "color",
+      "id": "badge_icon_color",
+      "label": "Couleur de l'icône ⚡",
+      "default": "#ff2d78"
+    },
+
+    {
+      "type": "header",
+      "content": "✏️ Titre"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Titre (utilisez || pour encadrer le mot souligné)",
+      "info": "Exemple : Collectez ||plus d'avis Google|| et faites décoller votre activité.",
+      "default": "Collectez ||plus d'avis Google|| et faites décoller votre activité."
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#0d0d1a"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 28,
+      "max": 90,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille du titre (desktop)",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Couleur du soulignage",
+      "default": "#ff2d78"
+    },
+
+    {
+      "type": "header",
+      "content": "📝 Texte descriptif"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Texte descriptif",
+      "default": "Collecter des avis Google n'a jamais été aussi facile. Viewup combine la force des objets NFC connectés pour récolter des avis, et une application intuitive gratuite pour gérer vos avis Google."
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Couleur du texte",
+      "default": "#333355"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille du texte",
+      "default": 16
+    },
+
+    {
+      "type": "header",
+      "content": "🔘 Bouton principal"
+    },
+    {
+      "type": "text",
+      "id": "btn1_label",
+      "label": "Texte du bouton",
+      "default": "Découvrez tous nos produits"
+    },
+    {
+      "type": "url",
+      "id": "btn1_url",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "color",
+      "id": "btn1_bg",
+      "label": "Couleur de fond",
+      "default": "#ff2d78"
+    },
+    {
+      "type": "color",
+      "id": "btn1_bg_hover",
+      "label": "Couleur de fond au survol",
+      "default": "#e0185e"
+    },
+    {
+      "type": "color",
+      "id": "btn1_text_color",
+      "label": "Couleur du texte",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "🔗 Lien secondaire"
+    },
+    {
+      "type": "text",
+      "id": "btn2_label",
+      "label": "Texte du lien",
+      "default": "Découvrez notre application"
+    },
+    {
+      "type": "url",
+      "id": "btn2_url",
+      "label": "Lien"
+    },
+    {
+      "type": "color",
+      "id": "btn2_text_color",
+      "label": "Couleur du lien",
+      "default": "#ff2d78"
+    },
+    {
+      "type": "color",
+      "id": "btn2_hover_color",
+      "label": "Couleur au survol",
+      "default": "#c8005a"
+    },
+
+    {
+      "type": "header",
+      "content": "🖼️ Illustration"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image / Illustration"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Hero Avis Google"
+    }
+  ]
+}
+{% endschema %}
