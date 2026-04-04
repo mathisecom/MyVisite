@@ -336,7 +336,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Détails",
+            "title": "DÉTAILS",
             "content": "<p>Chaque carte est équipée d’une puce sans-contact (NFC) ainsi que d’un QR code imprimé au dos, offrant deux possibilité de partage de vos coordonnées.</p>",
             "page": ""
           }
