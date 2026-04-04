@@ -236,35 +236,6 @@
         "bold_weight": 700
       }
     },
-    "mediasection_fVWwPj": {
-      "type": "mediasection",
-      "name": "NFC Hero",
-      "settings": {
-        "bg_color": "#f0ede8",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 0,
-        "title": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle",
-        "title_color": "#111827",
-        "title_size": 36,
-        "title_size_mobile": 26,
-        "title_weight": "700",
-        "title_font": "Georgia",
-        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
-        "body_color": "#4b5563",
-        "body_size": 16,
-        "body_size_mobile": 15,
-        "body_font": "Helvetica Neue",
-        "button_label": "Commandez la vôtre !",
-        "button_url": "",
-        "btn_bg": "#38d9d9",
-        "btn_hover": "#22c5c5",
-        "btn_text_color": "#ffffff",
-        "btn_size": 15,
-        "btn_radius": 40
-      }
-    },
     "featured_product_3NJKdP": {
       "type": "featured-product",
       "blocks": {
@@ -536,6 +507,35 @@
         "text_color": ""
       }
     },
+    "mediasection_fVWwPj": {
+      "type": "mediasection",
+      "name": "NFC Hero",
+      "settings": {
+        "bg_color": "#f2f2f2",
+        "padding_top": 64,
+        "padding_bottom": 60,
+        "padding_top_mobile": 34,
+        "padding_bottom_mobile": 34,
+        "title": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle",
+        "title_color": "#111827",
+        "title_size": 36,
+        "title_size_mobile": 26,
+        "title_weight": "700",
+        "title_font": "inherit",
+        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
+        "body_color": "#4b5563",
+        "body_size": 16,
+        "body_size_mobile": 15,
+        "body_font": "inherit",
+        "button_label": "Commandez la vôtre !",
+        "button_url": "",
+        "btn_bg": "#1a1a1a",
+        "btn_hover": "#061a2f",
+        "btn_text_color": "#ffffff",
+        "btn_size": 15,
+        "btn_radius": 40
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -614,11 +614,11 @@
     "hero_slideshow_QNrmDn",
     "logoscroll_tV88GM",
     "beneficeicons_tMxgAX",
-    "mediasection_fVWwPj",
     "featured_product_3NJKdP",
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
     "multi_column_q7BycL",
+    "mediasection_fVWwPj",
     "faq",
     "contact_CVVyVz"
   ]
