@@ -236,6 +236,35 @@
         "bold_weight": 700
       }
     },
+    "mediasection_fVWwPj": {
+      "type": "mediasection",
+      "name": "NFC Hero",
+      "settings": {
+        "bg_color": "#f2f2f2",
+        "padding_top": 64,
+        "padding_bottom": 60,
+        "padding_top_mobile": 34,
+        "padding_bottom_mobile": 34,
+        "title": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle",
+        "title_color": "#111827",
+        "title_size": 36,
+        "title_size_mobile": 22,
+        "title_weight": "700",
+        "title_font": "inherit",
+        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
+        "body_color": "#4b5563",
+        "body_size": 15,
+        "body_size_mobile": 13,
+        "body_font": "inherit",
+        "button_label": "Commandez la vôtre !",
+        "button_url": "",
+        "btn_bg": "#1a1a1a",
+        "btn_hover": "#061a2f",
+        "btn_text_color": "#ffffff",
+        "btn_size": 15,
+        "btn_radius": 40
+      }
+    },
     "featured_product_3NJKdP": {
       "type": "featured-product",
       "blocks": {
@@ -448,6 +477,143 @@
         "testimonial_card_text_color": ""
       }
     },
+    "benefice_icons_Rky4jM": {
+      "type": "benefice-icons",
+      "blocks": {
+        "advantage_rw7ppV": {
+          "type": "advantage",
+          "settings": {
+            "icon": "check",
+            "custom_icon_text": "FR",
+            "icon_bg": "#d8f0dd",
+            "icon_color": "#1e9c46",
+            "title": "Plus d'avis Google",
+            "text": "<p>Multipliez par 5 le nombre d'avis sur votre fiche Google grâce à nos plaques NFC.</p>"
+          }
+        },
+        "advantage_bGwjht": {
+          "type": "advantage",
+          "settings": {
+            "icon": "flash",
+            "custom_icon_text": "FR",
+            "icon_bg": "#dbe7ff",
+            "icon_color": "#2a66ff",
+            "title": "Installation instantanée",
+            "text": "<p>Collez la plaque et c'est prêt ! Aucune configuration technique requise.</p>"
+          }
+        },
+        "advantage_qqzNXW": {
+          "type": "advantage",
+          "settings": {
+            "icon": "clock",
+            "custom_icon_text": "FR",
+            "icon_bg": "#ebdefe",
+            "icon_color": "#8a3ffc",
+            "title": "Utilisable à vie",
+            "text": "<p>Pas d'abonnement, pas de frais cachés. Une fois achetée, elle est à vous pour toujours.</p>"
+          }
+        },
+        "advantage_rMPgCc": {
+          "type": "advantage",
+          "settings": {
+            "icon": "text",
+            "custom_icon_text": "FR",
+            "icon_bg": "#f3e5ae",
+            "icon_color": "#1f2937",
+            "title": "Fabriqué en France",
+            "text": "<p>Qualité premium, production locale et livraison rapide garantie.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "advantage_rw7ppV",
+        "advantage_bGwjht",
+        "advantage_qqzNXW",
+        "advantage_rMPgCc"
+      ],
+      "name": "Pourquoi choisir",
+      "settings": {
+        "heading": "Pourquoi choisir la Carte NFC MyVisite ?",
+        "section_bg": "#ffffff",
+        "title_color": "#081b3a",
+        "item_title_color": "#081b3a",
+        "item_text_color": "#45556c",
+        "max_width": 1500,
+        "content_max_width": 700,
+        "desktop_gap": 80,
+        "tablet_gap": 40,
+        "mobile_gap": 28,
+        "side_padding_desktop": 24,
+        "side_padding_tablet": 20,
+        "side_padding_mobile": 16,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "title_size_desktop": 40,
+        "title_size_tablet": 34,
+        "title_size_mobile": 26,
+        "title_line_height_desktop": 11,
+        "title_line_height_tablet": 11,
+        "title_line_height_mobile": 12,
+        "title_weight": 700,
+        "title_letter_spacing": -3,
+        "title_margin_bottom": 28,
+        "title_margin_bottom_mobile": 22,
+        "items_gap_desktop": 26,
+        "items_gap_tablet": 22,
+        "items_gap_mobile": 18,
+        "item_inner_gap": 16,
+        "item_inner_gap_mobile": 14,
+        "icon_box_size": 48,
+        "icon_box_size_mobile": 44,
+        "icon_box_radius": 12,
+        "icon_box_radius_mobile": 12,
+        "icon_size": 22,
+        "icon_size_mobile": 20,
+        "icon_text_size": 18,
+        "icon_text_size_mobile": 16,
+        "icon_text_weight": 700,
+        "item_title_size_desktop": 18,
+        "item_title_size_tablet": 18,
+        "item_title_size_mobile": 17,
+        "item_title_line_height_desktop": 12,
+        "item_title_line_height_tablet": 12,
+        "item_title_line_height_mobile": 12,
+        "item_title_weight": 700,
+        "item_title_spacing": 6,
+        "item_title_spacing_mobile": 5,
+        "item_text_size_desktop": 16,
+        "item_text_size_tablet": 16,
+        "item_text_size_mobile": 15,
+        "item_text_line_height_desktop": 15,
+        "item_text_line_height_tablet": 15,
+        "item_text_line_height_mobile": 15,
+        "item_text_weight": 400,
+        "image_max_width_desktop": 460,
+        "image_max_width_tablet": 380,
+        "image_max_width_mobile": 280,
+        "image_offset_desktop": 0,
+        "image_offset_tablet": 0,
+        "image_offset_mobile": 0
+      }
+    },
+    "scrolling_text_FLyQPM": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "Promotion text",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "#1a1a1a",
+        "background_gradient": "",
+        "text_color": "#ffffff",
+        "text_gradient": ""
+      }
+    },
     "multi_column_q7BycL": {
       "type": "multi-column",
       "blocks": {
@@ -493,6 +659,7 @@
         "item_i37qKa",
         "item_za3T7R"
       ],
+      "disabled": true,
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -505,35 +672,6 @@
         "background": "#f9f9f9",
         "background_gradient": "",
         "text_color": ""
-      }
-    },
-    "mediasection_fVWwPj": {
-      "type": "mediasection",
-      "name": "NFC Hero",
-      "settings": {
-        "bg_color": "#f2f2f2",
-        "padding_top": 64,
-        "padding_bottom": 60,
-        "padding_top_mobile": 34,
-        "padding_bottom_mobile": 34,
-        "title": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle",
-        "title_color": "#111827",
-        "title_size": 36,
-        "title_size_mobile": 22,
-        "title_weight": "700",
-        "title_font": "inherit",
-        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
-        "body_color": "#4b5563",
-        "body_size": 15,
-        "body_size_mobile": 13,
-        "body_font": "inherit",
-        "button_label": "Commandez la vôtre !",
-        "button_url": "",
-        "btn_bg": "#1a1a1a",
-        "btn_hover": "#061a2f",
-        "btn_text_color": "#ffffff",
-        "btn_size": 15,
-        "btn_radius": 40
       }
     },
     "faq": {
@@ -614,11 +752,13 @@
     "hero_slideshow_QNrmDn",
     "logoscroll_tV88GM",
     "beneficeicons_tMxgAX",
+    "mediasection_fVWwPj",
     "featured_product_3NJKdP",
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
+    "benefice_icons_Rky4jM",
+    "scrolling_text_FLyQPM",
     "multi_column_q7BycL",
-    "mediasection_fVWwPj",
     "faq",
     "contact_CVVyVz"
   ]
