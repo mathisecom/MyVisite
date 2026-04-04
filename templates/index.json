@@ -121,7 +121,7 @@
         "margin_bottom": 0,
         "margin_horizontal": 0,
         "margin_horizontal_mobile": 0,
-        "padding_top": 28,
+        "padding_top": 40,
         "padding_bottom": 0,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
@@ -130,6 +130,108 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
+      }
+    },
+    "beneficeicons_tMxgAX": {
+      "type": "beneficeicons",
+      "blocks": {
+        "benefit_janBHM": {
+          "type": "benefit",
+          "settings": {
+            "icon": "rocket",
+            "title": "Des avis en 5 secondes",
+            "text": "<p>Facilitez la récolte d’avis avec nos supports NFC et QR codes. Vos clients partagent leur expérience en quelques secondes.</p>"
+          }
+        },
+        "benefit_QNhRQH": {
+          "type": "benefit",
+          "settings": {
+            "icon": "scan",
+            "title": "Améliorez votre image",
+            "text": "<p><strong>Répondez rapidement</strong> et efficacement aux avis avec notre app et son IA et améliorez votre image en ligne sans effort.</p>"
+          }
+        },
+        "benefit_ge78tH": {
+          "type": "benefit",
+          "settings": {
+            "icon": "arrow",
+            "title": "Boostez votre visibilité locale",
+            "text": "<p><strong>Plus d’avis</strong> c’est une meilleure visibilité. Augmentez vos chances d’apparaître <strong>en haut des résultats Google</strong> et attirez plus de clients.</p>"
+          }
+        },
+        "benefit_YYPMLm": {
+          "type": "benefit",
+          "settings": {
+            "icon": "bars",
+            "title": "Des résultats visibles",
+            "text": "<p>Suivez votre collecte d’avis, votre <strong>visibilité</strong> sur Google et votre <strong>performance</strong> depuis notre app sur le web ou sur votre mobile.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_janBHM",
+        "benefit_QNhRQH",
+        "benefit_ge78tH",
+        "benefit_YYPMLm"
+      ],
+      "name": "Cartes bénéfices slider",
+      "settings": {
+        "max_width": 1600,
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "mobile_card_width": 85,
+        "gap_desktop": 18,
+        "gap_tablet": 16,
+        "gap_mobile": 12,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "side_padding_desktop": 20,
+        "side_padding_tablet": 16,
+        "section_bg": "#ffffff",
+        "card_bg": "#f5f5f5",
+        "icon_box_bg": "#ffffff",
+        "icon_color": "#d61f93",
+        "title_color": "#061a2f",
+        "text_color": "#59697c",
+        "bold_color": "#3b4b5d",
+        "card_radius": 18,
+        "card_radius_mobile": 18,
+        "card_padding_horizontal_desktop": 40,
+        "card_padding_vertical_desktop": 40,
+        "card_padding_horizontal_tablet": 28,
+        "card_padding_vertical_tablet": 28,
+        "card_padding_horizontal_mobile": 22,
+        "card_padding_vertical_mobile": 24,
+        "card_min_height_desktop": 300,
+        "card_min_height_tablet": 240,
+        "card_min_height_mobile": 0,
+        "icon_box_size": 64,
+        "icon_box_size_mobile": 58,
+        "icon_box_radius": 14,
+        "icon_box_radius_mobile": 14,
+        "icon_size": 28,
+        "icon_size_mobile": 26,
+        "icon_spacing_bottom": 26,
+        "icon_spacing_bottom_mobile": 22,
+        "title_size_desktop": 22,
+        "title_size_tablet": 20,
+        "title_size_mobile": 17,
+        "title_line_height_desktop": 12,
+        "title_line_height_tablet": 12,
+        "title_line_height_mobile": 12,
+        "title_weight": 700,
+        "title_spacing_bottom": 14,
+        "title_spacing_bottom_mobile": 12,
+        "title_letter_spacing": -2,
+        "text_size_desktop": 17,
+        "text_size_tablet": 16,
+        "text_size_mobile": 15,
+        "text_line_height_desktop": 15,
+        "text_line_height_tablet": 15,
+        "text_line_height_mobile": 15,
+        "bold_weight": 700
       }
     },
     "featured_product_3NJKdP": {
@@ -421,6 +523,7 @@
   "order": [
     "hero_slideshow_QNrmDn",
     "logoscroll_tV88GM",
+    "beneficeicons_tMxgAX",
     "featured_product_3NJKdP",
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
