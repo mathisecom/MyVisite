@@ -1,0 +1,245 @@
+{% stylesheet %}
+  .qb-benefits-section {
+    background: #ffffff;
+    padding: 48px 20px;
+  }
+
+  .qb-benefits-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .qb-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .qb-benefit-card {
+    background: #f5f5f5;
+    border-radius: 18px;
+    padding: 40px 40px 36px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .qb-benefit-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+  }
+
+  .qb-benefit-icon {
+    width: 28px;
+    height: 28px;
+    color: #d61f93;
+    flex-shrink: 0;
+  }
+
+  .qb-benefit-title {
+    margin: 0 0 14px;
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #061a2f;
+    letter-spacing: -0.02em;
+  }
+
+  .qb-benefit-text {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #59697c;
+  }
+
+  .qb-benefit-text strong {
+    color: #3b4b5d;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .qb-benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .qb-benefit-card {
+      min-height: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .qb-benefits-section {
+      padding: 32px 16px;
+    }
+
+    .qb-benefits-wrapper {
+      max-width: 100%;
+    }
+
+    .qb-benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .qb-benefit-card {
+      padding: 28px 22px;
+      border-radius: 18px;
+      min-height: auto;
+    }
+
+    .qb-benefit-icon-box {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 22px;
+    }
+
+    .qb-benefit-title {
+      font-size: 17px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .qb-benefit-text {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+{% endstylesheet %}
+
+<section class="qb-benefits-section">
+  <div class="qb-benefits-wrapper">
+    <div class="qb-benefits-grid">
+      {% for block in section.blocks %}
+        <div class="qb-benefit-card" {{ block.shopify_attributes }}>
+          <div class="qb-benefit-icon-box">
+            {% case block.settings.icon %}
+              {% when 'rocket' %}
+                <svg class="qb-benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M14.5 4.5C17 4 19.5 4.5 19.5 4.5C19.5 4.5 20 7 19.5 9.5C19.1 11.6 17.7 13.1 16 14.5L9.5 8C10.9 6.3 12.4 4.9 14.5 4.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.5 8L6.5 8.5L4.5 10.5L8 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 14.5L15.5 17.5L13.5 19.5L12.5 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.5 12.5L5.5 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M7.5 16.5C7.5 16.5 7 18 5.5 19C4.2 19.9 2.5 20 2.5 20C2.5 20 2.6 18.3 3.5 17C4.5 15.5 6 15 6 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+              {% when 'scan' %}
+                <svg class="qb-benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M8 4H5C4.45 4 4 4.45 4 5V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 4H19C19.55 4 20 4.45 20 5V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 20H5C4.45 20 4 19.55 4 19V16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 20H19C19.55 20 20 19.55 20 19V16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="8" y="8" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+
+              {% when 'arrow' %}
+                <svg class="qb-benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 16L10 10L14 14L20 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15 8H20V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+              {% when 'bars' %}
+                <svg class="qb-benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 20H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <rect x="6" y="11" width="3" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/>
+                  <rect x="11" y="7" width="3" height="11" rx="1" stroke="currentColor" stroke-width="1.8"/>
+                  <rect x="16" y="4" width="3" height="14" rx="1" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+            {% endcase %}
+          </div>
+
+          <h3 class="qb-benefit-title">{{ block.settings.title }}</h3>
+          <div class="qb-benefit-text">{{ block.settings.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cartes bénéfices",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Carte",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icône",
+          "default": "rocket",
+          "options": [
+            { "value": "rocket", "label": "Fusée" },
+            { "value": "scan", "label": "Scan / QR" },
+            { "value": "arrow", "label": "Flèche croissance" },
+            { "value": "bars", "label": "Graphique" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Titre"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte",
+          "default": "<p>Votre texte ici.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cartes bénéfices",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "rocket",
+            "title": "Des avis en 5 secondes",
+            "text": "<p>Facilitez la récolte d’avis avec nos supports NFC et QR codes. Vos clients partagent leur expérience en quelques secondes.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "scan",
+            "title": "Améliorez votre image",
+            "text": "<p><strong>Répondez rapidement</strong> et efficacement aux avis avec notre app et son IA et améliorez votre image en ligne sans effort.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "arrow",
+            "title": "Boostez votre visibilité locale",
+            "text": "<p><strong>Plus d’avis</strong> c’est une meilleure visibilité. Augmentez vos chances d’apparaître <strong>en haut des résultats Google</strong> et attirez plus de clients.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "bars",
+            "title": "Des résultats visibles",
+            "text": "<p>Suivez votre collecte d’avis, votre <strong>visibilité</strong> sur Google et votre <strong>performance</strong> depuis avec notre app sur le web ou sur votre mobile.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
