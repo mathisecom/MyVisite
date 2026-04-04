@@ -9,44 +9,32 @@
  */
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-1": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "",
-            "title": "",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide-1"
-      ],
+    "hero_slideshow_QNrmDn": {
+      "type": "hero-slideshow",
+      "name": "Hero Avis Google",
       "settings": {
-        "full_width": true,
-        "allow_transparent_header": true,
-        "show_initial_transition": false,
-        "image_size": "md",
-        "controls_type": "numbers",
-        "transition_type": "fade_with_text",
-        "autoplay": true,
-        "cycle_speed": 6,
-        "background": "#f2f2f2",
-        "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+        "bg_color": "#fcfcfc",
+        "section_padding": 52,
+        "badge_text": "Boostez votre e-réputation",
+        "badge_bg": "#f2f2f2",
+        "badge_text_color": "#1a1a2e",
+        "badge_icon_color": "#1a1a1a",
+        "title": "Collectez ||plus d'avis Google|| et faites décoller votre activité.",
+        "title_color": "#0d0d1a",
+        "title_size": 60,
+        "underline_color": "#1a1a1a",
+        "body_text": "Collecter des avis Google n'a jamais été aussi facile. Viewup combine la force des objets NFC connectés pour récolter des avis, et une application intuitive gratuite pour gérer vos avis Google.",
+        "body_color": "#333355",
+        "body_size": 16,
+        "btn1_label": "Découvrir Maintenant",
+        "btn1_url": "",
+        "btn1_bg": "#1a1a1a",
+        "btn1_bg_hover": "#121212",
+        "btn1_text_color": "#ffffff",
+        "btn2_label": "Contactez-Nous",
+        "btn2_url": "",
+        "btn2_text_color": "#1a1a1a",
+        "btn2_hover_color": "#121212"
       }
     },
     "logoscroll_tV88GM": {
@@ -130,7 +118,7 @@
         "margin_bottom": 0,
         "margin_horizontal": 0,
         "margin_horizontal_mobile": 0,
-        "padding_top": 0,
+        "padding_top": 28,
         "padding_bottom": 0,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
@@ -428,7 +416,7 @@
     }
   },
   "order": [
-    "slideshow",
+    "hero_slideshow_QNrmDn",
     "logoscroll_tV88GM",
     "featured_product_3NJKdP",
     "rich_text_Me8kNm",
