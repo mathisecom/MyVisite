@@ -1,15 +1,45 @@
 {% comment %}
   Section: NFC Hero - Carte de visite NFC
-  Responsive: Desktop & Mobile
+  Responsive: Desktop & Mobile — 100% personnalisable via le Customizer
 {% endcomment %}
 
-<section class="nfc-hero" id="nfc-hero-{{ section.id }}">
+<section class="nfc-hero" id="nfc-hero-{{ section.id }}"
+  style="
+    --nfc-bg:               {{ section.settings.bg_color }};
+    --nfc-title-color:      {{ section.settings.title_color }};
+    --nfc-title-size:       {{ section.settings.title_size }}px;
+    --nfc-title-size-mobile:{{ section.settings.title_size_mobile }}px;
+    --nfc-title-weight:     {{ section.settings.title_weight }};
+    --nfc-body-color:       {{ section.settings.body_color }};
+    --nfc-body-size:        {{ section.settings.body_size }}px;
+    --nfc-body-size-mobile: {{ section.settings.body_size_mobile }}px;
+    --nfc-btn-bg:           {{ section.settings.btn_bg }};
+    --nfc-btn-hover:        {{ section.settings.btn_hover }};
+    --nfc-btn-text:         {{ section.settings.btn_text_color }};
+    --nfc-btn-size:         {{ section.settings.btn_size }}px;
+    --nfc-radius:           {{ section.settings.btn_radius }}px;
+    --nfc-pad-top:          {{ section.settings.padding_top }}px;
+    --nfc-pad-bottom:       {{ section.settings.padding_bottom }}px;
+    --nfc-pad-top-mobile:   {{ section.settings.padding_top_mobile }}px;
+    --nfc-pad-bottom-mobile:{{ section.settings.padding_bottom_mobile }}px;
+  "
+>
   <div class="nfc-hero__inner">
 
     <!-- Colonne texte -->
     <div class="nfc-hero__content">
-      <h2 class="nfc-hero__title">{{ section.settings.title }}</h2>
-      <p class="nfc-hero__text">{{ section.settings.text }}</p>
+      <h2 class="nfc-hero__title"
+        {% if section.settings.title_font != 'inherit' %}
+          style="font-family: '{{ section.settings.title_font }}', sans-serif;"
+        {% endif %}
+      >{{ section.settings.title }}</h2>
+
+      <p class="nfc-hero__text"
+        {% if section.settings.body_font != 'inherit' %}
+          style="font-family: '{{ section.settings.body_font }}', sans-serif;"
+        {% endif %}
+      >{{ section.settings.text }}</p>
+
       <a href="{{ section.settings.button_url }}" class="nfc-hero__btn">
         {{ section.settings.button_label }}
       </a>
@@ -34,93 +64,80 @@
 </section>
 
 <style>
-  /* ─── Variables ─────────────────────────────────────────── */
-  #nfc-hero-{{ section.id }} {
-    --nfc-bg:         #f0ede8;
-    --nfc-title:      #111827;
-    --nfc-body:       #4b5563;
-    --nfc-btn-bg:     #38d9d9;
-    --nfc-btn-hover:  #22c5c5;
-    --nfc-btn-text:   #ffffff;
-    --nfc-radius:     40px;
-    --nfc-gap:        clamp(2rem, 5vw, 5rem);
-    --nfc-pad-v:      clamp(3rem, 6vw, 5rem);
-    --nfc-pad-h:      clamp(1.5rem, 5vw, 5rem);
-  }
-
   /* ─── Wrapper ────────────────────────────────────────────── */
-  .nfc-hero {
+  #nfc-hero-{{ section.id }} {
     background: var(--nfc-bg);
     border-radius: 20px;
     overflow: hidden;
     margin: clamp(1rem, 3vw, 2.5rem) auto;
     max-width: 1280px;
     width: 92%;
+    padding-top: var(--nfc-pad-top);
+    padding-bottom: var(--nfc-pad-bottom);
   }
 
-  .nfc-hero__inner {
+  #nfc-hero-{{ section.id }} .nfc-hero__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--nfc-gap);
-    padding: var(--nfc-pad-v) var(--nfc-pad-h);
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
   }
 
   /* ─── Colonne texte ──────────────────────────────────────── */
-  .nfc-hero__content {
+  #nfc-hero-{{ section.id }} .nfc-hero__content {
     flex: 0 1 480px;
     min-width: 0;
   }
 
-  .nfc-hero__title {
-    font-family: 'Georgia', serif;
-    font-size: clamp(1.65rem, 3.5vw, 2.6rem);
-    font-weight: 700;
+  /* ─── Titre ──────────────────────────────────────────────── */
+  #nfc-hero-{{ section.id }} .nfc-hero__title {
+    font-size: var(--nfc-title-size);
+    font-weight: var(--nfc-title-weight);
     line-height: 1.22;
-    color: var(--nfc-title);
+    color: var(--nfc-title-color);
     margin: 0 0 1.25rem;
     letter-spacing: -0.02em;
   }
 
-  .nfc-hero__text {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: clamp(0.9rem, 1.4vw, 1rem);
+  /* ─── Corps ──────────────────────────────────────────────── */
+  #nfc-hero-{{ section.id }} .nfc-hero__text {
+    font-size: var(--nfc-body-size);
     line-height: 1.7;
-    color: var(--nfc-body);
+    color: var(--nfc-body-color);
     margin: 0 0 2rem;
     max-width: 42ch;
   }
 
   /* ─── Bouton ─────────────────────────────────────────────── */
-  .nfc-hero__btn {
+  #nfc-hero-{{ section.id }} .nfc-hero__btn {
     display: inline-block;
     background: var(--nfc-btn-bg);
     color: var(--nfc-btn-text);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 0.95rem;
+    font-size: var(--nfc-btn-size);
     font-weight: 600;
     text-decoration: none;
     padding: 0.85rem 2rem;
     border-radius: var(--nfc-radius);
     transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-    box-shadow: 0 4px 18px rgba(56, 217, 217, 0.35);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     white-space: nowrap;
   }
 
-  .nfc-hero__btn:hover,
-  .nfc-hero__btn:focus-visible {
+  #nfc-hero-{{ section.id }} .nfc-hero__btn:hover,
+  #nfc-hero-{{ section.id }} .nfc-hero__btn:focus-visible {
     background: var(--nfc-btn-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(56, 217, 217, 0.45);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     outline: none;
   }
 
-  .nfc-hero__btn:active {
+  #nfc-hero-{{ section.id }} .nfc-hero__btn:active {
     transform: translateY(0);
   }
 
   /* ─── Colonne image ──────────────────────────────────────── */
-  .nfc-hero__visual {
+  #nfc-hero-{{ section.id }} .nfc-hero__visual {
     flex: 0 1 520px;
     min-width: 0;
     display: flex;
@@ -128,81 +145,75 @@
     justify-content: center;
   }
 
-  .nfc-hero__img {
+  #nfc-hero-{{ section.id }} .nfc-hero__img {
     width: 100%;
     max-width: 520px;
     height: auto;
     object-fit: contain;
     display: block;
-    /* légère élévation pour reproduire l'effet flottant */
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.10));
     transform: translateY(0);
     transition: transform 0.4s ease;
   }
 
-  .nfc-hero__img--placeholder {
+  #nfc-hero-{{ section.id }} .nfc-hero__img--placeholder {
     border-radius: 12px;
     opacity: 0.4;
   }
 
-  .nfc-hero__visual:hover .nfc-hero__img {
+  #nfc-hero-{{ section.id }} .nfc-hero__visual:hover .nfc-hero__img {
     transform: translateY(-6px);
   }
 
   /* ─── Responsive Tablet ──────────────────────────────────── */
   @media (max-width: 900px) {
-    .nfc-hero__inner {
+    #nfc-hero-{{ section.id }} .nfc-hero__inner {
       gap: 2.5rem;
     }
-    .nfc-hero__visual {
+    #nfc-hero-{{ section.id }} .nfc-hero__visual {
       flex: 0 1 380px;
     }
   }
 
   /* ─── Responsive Mobile ──────────────────────────────────── */
   @media (max-width: 680px) {
-    .nfc-hero {
+    #nfc-hero-{{ section.id }} {
       width: 88%;
       border-radius: 16px;
       margin: 1.25rem auto;
+      padding-top: var(--nfc-pad-top-mobile);
+      padding-bottom: var(--nfc-pad-bottom-mobile);
     }
 
-    .nfc-hero__inner {
+    #nfc-hero-{{ section.id }} .nfc-hero__inner {
       flex-direction: column;
       align-items: flex-start;
-      padding: 2.5rem 1.75rem 0;
+      padding: 0 1.75rem;
       gap: 2rem;
     }
 
-    .nfc-hero__content {
+    #nfc-hero-{{ section.id }} .nfc-hero__content {
       flex: none;
       width: 100%;
     }
 
-    .nfc-hero__title {
-      font-size: clamp(1.5rem, 6vw, 2rem);
+    #nfc-hero-{{ section.id }} .nfc-hero__title {
+      font-size: var(--nfc-title-size-mobile);
     }
 
-    .nfc-hero__text {
+    #nfc-hero-{{ section.id }} .nfc-hero__text {
       max-width: 100%;
-      font-size: 0.92rem;
+      font-size: var(--nfc-body-size-mobile);
     }
 
-    .nfc-hero__btn {
-      font-size: 0.9rem;
-      padding: 0.8rem 1.75rem;
-    }
-
-    .nfc-hero__visual {
+    #nfc-hero-{{ section.id }} .nfc-hero__visual {
       flex: none;
       width: 100%;
       justify-content: center;
-      /* L'image dépasse légèrement en bas comme dans le design original */
-      margin-bottom: 0;
       overflow: visible;
     }
 
-    .nfc-hero__img {
+    #nfc-hero-{{ section.id }} .nfc-hero__img {
       max-width: 90%;
       filter: drop-shadow(0 12px 28px rgba(0,0,0,0.12));
     }
@@ -215,17 +226,188 @@
   "tag": "section",
   "class": "nfc-hero-section",
   "settings": [
+
+    {
+      "type": "header",
+      "content": "🎨 Couleur de fond"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond",
+      "default": "#f0ede8"
+    },
+
+    {
+      "type": "header",
+      "content": "📐 Espacement (Desktop)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessus",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessous",
+      "default": 60
+    },
+
+    {
+      "type": "header",
+      "content": "📱 Espacement (Mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessus — mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacement dessous — mobile",
+      "default": 0
+    },
+
+    {
+      "type": "header",
+      "content": "✏️ Titre"
+    },
     {
       "type": "text",
       "id": "title",
-      "label": "Titre",
+      "label": "Texte du titre",
       "default": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#111827"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille du titre (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 16,
+      "max": 52,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille du titre (mobile)",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Graisse du titre",
+      "options": [
+        { "value": "400", "label": "Normal (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra-Bold (800)" },
+        { "value": "900", "label": "Black (900)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "title_font",
+      "label": "Police du titre",
+      "info": "Utilise la police du thème ou une police classique.",
+      "options": [
+        { "value": "inherit", "label": "Police du thème" },
+        { "value": "Georgia", "label": "Georgia (serif)" },
+        { "value": "Times New Roman", "label": "Times New Roman (serif)" },
+        { "value": "Arial", "label": "Arial (sans-serif)" },
+        { "value": "Verdana", "label": "Verdana (sans-serif)" },
+        { "value": "Trebuchet MS", "label": "Trebuchet MS (sans-serif)" }
+      ],
+      "default": "Georgia"
+    },
+
+    {
+      "type": "header",
+      "content": "📝 Texte descriptif"
     },
     {
       "type": "textarea",
       "id": "text",
       "label": "Texte descriptif",
       "default": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. Ce profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement."
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Couleur du texte",
+      "default": "#4b5563"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille du texte (desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_size_mobile",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille du texte (mobile)",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "body_font",
+      "label": "Police du texte",
+      "options": [
+        { "value": "inherit", "label": "Police du thème" },
+        { "value": "Helvetica Neue", "label": "Helvetica Neue" },
+        { "value": "Arial", "label": "Arial" },
+        { "value": "Georgia", "label": "Georgia (serif)" },
+        { "value": "Verdana", "label": "Verdana" },
+        { "value": "Trebuchet MS", "label": "Trebuchet MS" }
+      ],
+      "default": "Helvetica Neue"
+    },
+
+    {
+      "type": "header",
+      "content": "🔘 Bouton"
     },
     {
       "type": "text",
@@ -239,10 +421,54 @@
       "label": "Lien du bouton"
     },
     {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Couleur de fond",
+      "default": "#38d9d9"
+    },
+    {
+      "type": "color",
+      "id": "btn_hover",
+      "label": "Couleur au survol",
+      "default": "#22c5c5"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Couleur du texte",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "btn_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille du texte du bouton",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "btn_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Arrondi du bouton",
+      "default": 40
+    },
+
+    {
+      "type": "header",
+      "content": "🖼️ Image"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Image (mockups téléphones)"
     }
+
   ],
   "presets": [
     {
