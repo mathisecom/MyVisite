@@ -999,13 +999,21 @@
             "title": "Que faire si mes informations changent ?",
             "content": "<p>Si vos informations de contact changent, vous pouvez les mettre à jour dans votre carte de visite électronique, et ces changements seront automatiquement reflétés lorsque vous partagerez votre carte avec d'autres personnes.</p>"
           }
+        },
+        "item_fc4Vbx": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je utiliser ma carte de visite électronique hors ligne ?",
+            "content": "<p>Oui, vous pouvez stocker une version de votre carte de visite électronique sur votre appareil pour la partager hors ligne, mais la mise à jour automatique des informations ne fonctionnera qu'en ligne.</p>"
+          }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
         "166442457738b23caf-2",
-        "item_UaY9HU"
+        "item_UaY9HU",
+        "item_fc4Vbx"
       ],
       "settings": {
         "full_width": false,
