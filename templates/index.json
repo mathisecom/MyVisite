@@ -667,12 +667,24 @@
             "title": "Très bonne qualité",
             "content": "<p>Très bonne qualité, la carte est élégante et solide. Mes contacts sont toujours surpris quand je l’utilise, ça change clairement des cartes classiques.</p>"
           }
+        },
+        "testimonial_AagHLn": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Thomas R.",
+            "title": "Super concept et très pratique",
+            "content": "<p>Super concept et très pratique au quotidien. Petit point à savoir : le NFC dépend des téléphones, mais le QR code ou le lien fonctionnent parfaitement donc aucun souci.</p>"
+          }
         }
       },
       "block_order": [
         "testimonial_MP63rM",
         "testimonial_Eq94Xa",
-        "testimonial_zx6DkK"
+        "testimonial_zx6DkK",
+        "testimonial_AagHLn"
       ],
       "name": "Testimonials",
       "settings": {
