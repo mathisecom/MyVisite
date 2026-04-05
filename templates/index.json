@@ -1006,6 +1006,13 @@
             "title": "Puis-je utiliser ma carte de visite électronique hors ligne ?",
             "content": "<p>Oui, vous pouvez stocker une version de votre carte de visite électronique sur votre appareil pour la partager hors ligne, mais la mise à jour automatique des informations ne fonctionnera qu'en ligne.</p>"
           }
+        },
+        "item_PYCFzQ": {
+          "type": "item",
+          "settings": {
+            "title": "Ma carte de visite électronique est-elle sécurisée ?",
+            "content": "<p>Oui, la plupart des services de cartes de visite électroniques offrent des options de confidentialité pour protéger vos informations. Vous pouvez généralement choisir de partager uniquement les informations que vous souhaitez.</p>"
+          }
         }
       },
       "block_order": [
@@ -1013,7 +1020,8 @@
         "166442457738b23caf-1",
         "166442457738b23caf-2",
         "item_UaY9HU",
-        "item_fc4Vbx"
+        "item_fc4Vbx",
+        "item_PYCFzQ"
       ],
       "settings": {
         "full_width": false,
