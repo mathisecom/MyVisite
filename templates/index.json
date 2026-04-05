@@ -252,7 +252,7 @@
         "title_size_mobile": 22,
         "title_weight": "700",
         "title_font": "inherit",
-        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. \n<br><br>\nCe profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
+        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. \nCe profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
         "body_color": "#4b5563",
         "body_size": 15,
         "body_size_mobile": 13,
@@ -263,7 +263,8 @@
         "btn_hover": "#061a2f",
         "btn_text_color": "#ffffff",
         "btn_size": 15,
-        "btn_radius": 40
+        "btn_radius": 40,
+        "image": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T153718.727.png"
       }
     },
     "multi_column_wU4Lyw": {
