@@ -158,16 +158,16 @@
           "type": "benefit",
           "settings": {
             "icon": "arrow",
-            "title": "Boostez votre visibilité locale",
-            "text": "<p><strong>Plus d’avis</strong> c’est une meilleure visibilité. Augmentez vos chances d’apparaître <strong>en haut des résultats Google</strong> et attirez plus de clients.</p>"
+            "title": "Partage instantané",
+            "text": "<p>Transmettez vos coordonnées en 1 seconde grâce au <strong>NFC ou au QR code, sans application.</strong></p>"
           }
         },
         "benefit_YYPMLm": {
           "type": "benefit",
           "settings": {
             "icon": "bars",
-            "title": "Des résultats visibles",
-            "text": "<p>Suivez votre collecte d’avis, votre <strong>visibilité</strong> sur Google et votre <strong>performance</strong> depuis notre app sur le web ou sur votre mobile.</p>"
+            "title": "Évolutive et toujours à jour",
+            "text": "<p>Modifiez vos informations à tout moment sans <strong>jamais réimprimer de carte.</strong></p>"
           }
         }
       },
@@ -205,8 +205,8 @@
         "card_padding_vertical_desktop": 40,
         "card_padding_horizontal_tablet": 28,
         "card_padding_vertical_tablet": 28,
-        "card_padding_horizontal_mobile": 22,
-        "card_padding_vertical_mobile": 24,
+        "card_padding_horizontal_mobile": 24,
+        "card_padding_vertical_mobile": 16,
         "card_min_height_desktop": 300,
         "card_min_height_tablet": 240,
         "card_min_height_mobile": 0,
