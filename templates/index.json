@@ -956,7 +956,7 @@
           "type": "item",
           "settings": {
             "title": "Qu'est-ce qu'une carte NFC ?",
-            "content": ""
+            "content": "<p>Une carte NFC (Near Field Communication) est une technologie sans contact qui permet d’échanger des données via des ondes radio à courte portée. Lorsqu’un smartphone compatible s’approche d’une carte NFC, celle-ci transmet instantanément les informations qu’elle contient, comme un lien vers un site web, des coordonnées ou une page d’avis. Contrairement aux QR codes, les cartes NFC ne nécessitent pas de caméra ou d’application.</p>"
           }
         },
         "166442457738b23caf-1": {
