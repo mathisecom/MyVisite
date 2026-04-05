@@ -327,6 +327,12 @@
     "featured_product_3NJKdP": {
       "type": "featured-product",
       "blocks": {
+        "liquid_EVbtbK": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"main-product__block main-product__block-custom_liquid\">\n  <div class=\"m-product-text\">\n    <style>\n\n      .badges-container {\n        display: flex;\n        gap: 6px;\n        align-items: center;\n        padding-bottom: 0; /* ❌ supprimé */\n        margin-bottom: 0; /* sécurité */\n      }\n\n      .badge-2 {\n        display: inline-block;\n        padding: 4px 10px;\n        font-size: 12px;\n        font-weight: bold;\n        color: #000;\n        background-color: #F2F2F2;\n        border-radius: 15px;\n        text-transform: uppercase;\n        white-space: nowrap;\n      }\n\n      .badge {\n        display: inline-block;\n        padding: 4px 10px;\n        font-size: 12px;\n        font-weight: bold;\n        color: #000;\n        background-color: #F2F2F2;\n        border-radius: 15px;\n        text-transform: uppercase;\n        white-space: nowrap;\n      }\n\n    </style>\n\n    <div class=\"badges-container\">\n      <div class=\"badge\">Best Seller</div>\n      <div class=\"badge-2\">🇫🇷 Fabriqué en France</div>\n    </div>\n  </div>\n</div>"
+          }
+        },
         "liquid_iPG8gR": {
           "type": "liquid",
           "settings": {
@@ -412,6 +418,7 @@
         }
       },
       "block_order": [
+        "liquid_EVbtbK",
         "liquid_iPG8gR",
         "title_KWUwkU",
         "price_W8gQaY",
@@ -424,6 +431,7 @@
         "collapsible_text_giTnVY",
         "collapsible_text_Q3qrbF"
       ],
+      "custom_css": [],
       "name": "Featured product",
       "settings": {
         "full_width": true,
