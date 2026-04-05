@@ -828,6 +828,7 @@
       "name": "Pourquoi choisir",
       "settings": {
         "heading": "Pourquoi choisir la Carte NFC MyVisite ?",
+        "image": "shopify://shop_images/Group_1321314747_4.jpg",
         "section_bg": "#ffffff",
         "title_color": "#081b3a",
         "item_title_color": "#081b3a",
