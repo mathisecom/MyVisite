@@ -299,6 +299,7 @@
         "item_yBxUMj": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T163139.092.jpg",
             "column_size": "3",
             "title": "3 - Echangez et synchronisez",
             "heading_tag": "h4",
@@ -326,6 +327,22 @@
         "background": "",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "scrolling_text_V8nkxz": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "Transformez Chaque Rencontre En Opportunité !",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 8,
+        "background": "#1a1a1a",
+        "background_gradient": "",
+        "text_color": "#ffffff",
+        "text_gradient": ""
       }
     },
     "featured_product_3NJKdP": {
@@ -1031,6 +1048,7 @@
     "beneficeicons_tMxgAX",
     "mediasection_fVWwPj",
     "multi_column_wU4Lyw",
+    "scrolling_text_V8nkxz",
     "featured_product_3NJKdP",
     "logoscroll_gYg9zF",
     "text_with_icons_kbRAgV",
