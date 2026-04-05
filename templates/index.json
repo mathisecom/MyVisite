@@ -273,6 +273,7 @@
         "item_jdAPxT": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Higgsfield_AI_2026-03-19_2.webp",
             "column_size": "3",
             "title": "1 - Badgez en NFC ou flashez  le QRCode",
             "heading_tag": "h4",
@@ -285,6 +286,7 @@
         "item_PDdtYj": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/mock-up-mobile-card.png",
             "column_size": "3",
             "title": "2 - Créez de l'engagement",
             "heading_tag": "h4",
