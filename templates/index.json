@@ -992,12 +992,20 @@
             "title": "Les cartes NFC sont-elles compatibles avec tous les smartphones ?",
             "content": "<p>Oui, la majorité des smartphones récents (Android et iOS) sont compatibles avec la technologie NFC. Les modèles plus anciens ou d’entrée de gamme peuvent ne pas inclure cette fonctionnalité. Astuce : Si un client ne dispose pas de la fonctionnalité NFC, le QR code intégré aux cartes permet de rediriger vers les liens programmés.</p>"
           }
+        },
+        "item_UaY9HU": {
+          "type": "item",
+          "settings": {
+            "title": "Que faire si mes informations changent ?",
+            "content": "<p>Si vos informations de contact changent, vous pouvez les mettre à jour dans votre carte de visite électronique, et ces changements seront automatiquement reflétés lorsque vous partagerez votre carte avec d'autres personnes.</p>"
+          }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_UaY9HU"
       ],
       "settings": {
         "full_width": false,
