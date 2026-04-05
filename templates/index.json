@@ -678,13 +678,37 @@
             "title": "Super concept et très pratique",
             "content": "<p>Super concept et très pratique au quotidien. Petit point à savoir : le NFC dépend des téléphones, mais le QR code ou le lien fonctionnent parfaitement donc aucun souci.</p>"
           }
+        },
+        "testimonial_iXBfVy": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Mélanie D.",
+            "title": "Un outil moderne et écologique",
+            "content": "<p>Un outil moderne et écologique 👌 Je n’imprime plus rien et je peux modifier mes infos à tout moment. C’est exactement ce qu’il me fallait.</p>"
+          }
+        },
+        "testimonial_7MGgHL": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Lucas G.",
+            "title": "Rapide, pro et ça fait vraiment la différence",
+            "content": "<p>Je ne peux plus m’en passer en prospection. Rapide, pro et ça fait vraiment la différence face aux concurrents. Excellent rapport qualité/prix.</p>"
+          }
         }
       },
       "block_order": [
         "testimonial_MP63rM",
         "testimonial_Eq94Xa",
         "testimonial_zx6DkK",
-        "testimonial_AagHLn"
+        "testimonial_AagHLn",
+        "testimonial_iXBfVy",
+        "testimonial_7MGgHL"
       ],
       "name": "Testimonials",
       "settings": {
