@@ -32,6 +32,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T233140.863.png",
             "mobile_icon_width": 40,
             "icon_width": 40,
             "icon_background_type": "none",
@@ -45,6 +46,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T233211.885.png",
             "mobile_icon_width": 40,
             "icon_width": 40,
             "icon_background_type": "none",
