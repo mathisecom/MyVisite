@@ -265,6 +265,65 @@
         "btn_radius": 40
       }
     },
+    "multi_column_wU4Lyw": {
+      "type": "multi-column",
+      "blocks": {
+        "item_jdAPxT": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "1 - Badgez en NFC ou flashez  le QRCode",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_PDdtYj": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "2 - Créez de l'engagement",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_yBxUMj": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "3 - Echangez et synchronisez",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_jdAPxT",
+        "item_PDdtYj",
+        "item_yBxUMj"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "",
+        "content": "<p>Organize content into multiple columns to share useful information to your customers about your products, values...</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured_product_3NJKdP": {
       "type": "featured-product",
       "blocks": {
@@ -906,6 +965,7 @@
     "logoscroll_tV88GM",
     "beneficeicons_tMxgAX",
     "mediasection_fVWwPj",
+    "multi_column_wU4Lyw",
     "featured_product_3NJKdP",
     "logoscroll_gYg9zF",
     "text_with_icons_kbRAgV",
