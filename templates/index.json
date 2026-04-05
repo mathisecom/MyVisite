@@ -565,8 +565,8 @@
           "settings": {
             "icon": "picto-coupon",
             "custom_icon": "shopify://shop_images/save.png",
-            "mobile_icon_width": 40,
-            "icon_width": 40,
+            "mobile_icon_width": 44,
+            "icon_width": 44,
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
@@ -579,8 +579,8 @@
           "settings": {
             "icon": "picto-coupon",
             "custom_icon": "shopify://shop_images/network.png",
-            "mobile_icon_width": 40,
-            "icon_width": 40,
+            "mobile_icon_width": 44,
+            "icon_width": 44,
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
@@ -593,8 +593,8 @@
           "settings": {
             "icon": "picto-coupon",
             "custom_icon": "shopify://shop_images/contact-book.png",
-            "mobile_icon_width": 40,
-            "icon_width": 40,
+            "mobile_icon_width": 44,
+            "icon_width": 44,
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
