@@ -143,7 +143,7 @@
           "settings": {
             "icon": "rocket",
             "title": "Utilisable à Vie",
-            "text": "<p>Pas d'abonnement, pas de frais cachés. Une fois achetée, elle est à vous pour toujours.</p>"
+            "text": "<p>Pas d'abonnement, pas de frais cachés. Une fois achetée, <strong>elle est à vous pour toujours.</strong></p>"
           }
         },
         "benefit_QNhRQH": {
@@ -151,7 +151,7 @@
           "settings": {
             "icon": "scan",
             "title": "Améliorez votre image",
-            "text": "<p><strong>Répondez rapidement</strong> et efficacement aux avis avec notre app et son IA et améliorez votre image en ligne sans effort.</p>"
+            "text": "<p>Faites forte impression dès le premier contact avec une <strong>carte innovante qui remplace le papier.</strong></p>"
           }
         },
         "benefit_ge78tH": {
