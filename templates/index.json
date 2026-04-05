@@ -955,22 +955,22 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "Qu'est-ce qu'une carte NFC ?",
+            "content": ""
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Pourquoi choisir la technologie NFC pour mon entreprise ?",
+            "content": "<p>Adopter la technologie NFC offre plusieurs avantages : - Modernité : Elle renforce votre image de marque en montrant que votre entreprise utilise des outils innovants. - Rapidité : Un simple geste suffit pour partager des informations ou interagir avec vos clients. - Visibilité accrue : Elle redirige facilement vos clients vers vos réseaux sociaux, votre site web ou une page d’avis. Exemple : Un restaurant peut utiliser une plaque NFC pour simplifier les réservations et inciter ses clients à laisser un avis sur Tripadvisor ou Google My Business. Pour en savoir plus sur l’impact des cartes NFC, consultez notrearticle.</p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Les cartes NFC sont-elles compatibles avec tous les smartphones ?",
+            "content": "<p>Oui, la majorité des smartphones récents (Android et iOS) sont compatibles avec la technologie NFC. Les modèles plus anciens ou d’entrée de gamme peuvent ne pas inclure cette fonctionnalité. Astuce : Si un client ne dispose pas de la fonctionnalité NFC, le QR code intégré aux cartes permet de rediriger vers les liens programmés.</p>"
           }
         }
       },
