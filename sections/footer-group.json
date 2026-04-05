@@ -96,7 +96,7 @@
           "type": "text",
           "settings": {
             "title": "Contactez-Nous",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "content": "<p>Mail: myvisitecard@gmail.com</p><p>Tel : 0636861212</p>",
             "enable_follow_on_shop": true
           }
         }
