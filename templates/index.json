@@ -357,13 +357,13 @@
         "liquid_iPG8gR": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"product-info__liquid\">\n              <div class=\"product-info__block-item\" data-block-id=\"liquid_VYgyhr\" data-block-type=\"liquid\"><div class=\"product-info__liquid\">\n              <div class=\"product-info__block-item\" data-block-id=\"liquid_ayckTY\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n    <div class=\"main-product__block main-product__block-custom_liquid\">\n      <div class=\"m-product-text\">\n        <div class=\"main-product__block main-product__block-custom_liquid\">\n          <div class=\"m-product-text\">\n            <div class=\"main-product__block main-product__block-custom_liquid\">\n              <div class=\"m-product-text\">\n                <div class=\"product-info__liquid\">\n                  <a class=\"image-size\" style=\"display: flex; align-items: center; gap: 8px;\">\n                    <img src=\"https://cdn.shopify.com/s/files/1/0776/3751/7627/files/avis.png?v=1687213619\" alt=\"Étoiles\" width=\"63\" height=\"13\">\n                    <span class=\"text-size\">Noté <b>4,8/5</b> sur la base de 400 avis</span>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n            </div></div>\n            </div>"
+            "liquid": "<div class=\"product-info__liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n  <div class=\"product-info__block-item\" data-block-id=\"liquid_VYgyhr\" data-block-type=\"liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n    \n    <div class=\"product-info__liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n      <div class=\"product-info__block-item\" data-block-id=\"liquid_ayckTY\" data-block-type=\"liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n        \n        <div class=\"product-info__liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n          <div class=\"main-product__block main-product__block-custom_liquid\" style=\"margin-bottom:0;\">\n            \n            <div class=\"m-product-text\" style=\"margin-bottom:0;\">\n              <div class=\"main-product__block main-product__block-custom_liquid\" style=\"margin-bottom:0;\">\n                \n                <div class=\"m-product-text\" style=\"margin-bottom:0;\">\n                  <div class=\"main-product__block main-product__block-custom_liquid\" style=\"margin-bottom:0;\">\n                    \n                    <div class=\"m-product-text\" style=\"margin-bottom:0;\">\n                      <div class=\"product-info__liquid\" style=\"padding-bottom:0;margin-bottom:0;\">\n                        \n                        <a class=\"image-size\" style=\"display:flex;align-items:center;gap:8px;margin-bottom:0;\">\n                          <img src=\"https://cdn.shopify.com/s/files/1/0776/3751/7627/files/avis.png?v=1687213619\" alt=\"Étoiles\" width=\"63\" height=\"13\">\n                          <span class=\"text-size\">Noté <b>4,8/5</b> sur la base de 400 avis</span>\n                        </a>\n\n                      </div>\n                    </div>\n\n                  </div>\n                </div>\n\n              </div>\n            </div>\n\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>"
           }
         },
-        "title_KWUwkU": {
-          "type": "title",
+        "text_YP9WBA": {
+          "type": "text",
           "settings": {
-            "heading_tag": "h3"
+            "text": "<h3>Carte de visite NFC - MyVisite</h3>"
           }
         },
         "price_W8gQaY": {
@@ -453,7 +453,7 @@
       "block_order": [
         "liquid_EVbtbK",
         "liquid_iPG8gR",
-        "title_KWUwkU",
+        "text_YP9WBA",
         "price_W8gQaY",
         "liquid_6dj9AQ",
         "rating_mATKGi",
