@@ -926,7 +926,8 @@
         "btn_hover": "#061a2f",
         "btn_text_color": "#ffffff",
         "btn_size": 15,
-        "btn_radius": 40
+        "btn_radius": 40,
+        "image": "shopify://shop_images/677da840fe69b54123656c21_Group_1321315141.webp"
       }
     },
     "scrolling_text_FLyQPM": {
