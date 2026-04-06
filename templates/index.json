@@ -893,36 +893,6 @@
         "image_offset_mobile": 0
       }
     },
-    "mediasection_6QB7PB": {
-      "type": "mediasection",
-      "name": "NFC Hero",
-      "settings": {
-        "bg_color": "#f5f5f5",
-        "padding_top": 64,
-        "padding_bottom": 60,
-        "padding_top_mobile": 34,
-        "padding_bottom_mobile": 34,
-        "title": "Pourquoi la carte de visite NFC va révolutionner votre vie professionnelle",
-        "title_color": "#111827",
-        "title_size": 36,
-        "title_size_mobile": 22,
-        "title_weight": "700",
-        "title_font": "inherit",
-        "text": "Grâce à la technologie Near Field Communication (NFC) la carte connectée est reliée à votre profil digital en ligne. \nCe profil est modifiable gratuitement et sans limite, sur une plateforme sécurisée et auditée régulièrement.",
-        "body_color": "#4b5563",
-        "body_size": 15,
-        "body_size_mobile": 13,
-        "body_font": "inherit",
-        "button_label": "Commandez la vôtre !",
-        "button_url": "#shopify-section-template--30149615288669__featured_product_3NJKdP",
-        "btn_bg": "#1a1a1a",
-        "btn_hover": "#061a2f",
-        "btn_text_color": "#ffffff",
-        "btn_size": 15,
-        "btn_radius": 40,
-        "image": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T153718.727.png"
-      }
-    },
     "scrolling_text_FLyQPM": {
       "type": "scrolling-text",
       "name": "Scrolling text",
@@ -1110,7 +1080,6 @@
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
     "benefice_icons_Rky4jM",
-    "mediasection_6QB7PB",
     "scrolling_text_FLyQPM",
     "multi_column_q7BycL",
     "faq",
