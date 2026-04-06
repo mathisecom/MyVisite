@@ -372,6 +372,12 @@
             "show_taxes_notice": false
           }
         },
+        "text_9UWMxj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Avec notre <strong>carte NFC</strong>, partagez vos coordonnées, vos réseaux sociaux et bien plus encore d'un simple tap ou scan.</p>"
+          }
+        },
         "liquid_6dj9AQ": {
           "type": "liquid",
           "settings": {
@@ -455,6 +461,7 @@
         "liquid_iPG8gR",
         "text_YP9WBA",
         "price_W8gQaY",
+        "text_9UWMxj",
         "liquid_6dj9AQ",
         "rating_mATKGi",
         "variant_picker_eeW7Eq",
@@ -893,6 +900,35 @@
         "image_offset_mobile": 0
       }
     },
+    "mediasection_e8NMHV": {
+      "type": "mediasection",
+      "name": "NFC Hero",
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "padding_top": 64,
+        "padding_bottom": 60,
+        "padding_top_mobile": 34,
+        "padding_bottom_mobile": 34,
+        "title": "Transformez chaque rencontre en opportunité",
+        "title_color": "#111827",
+        "title_size": 36,
+        "title_size_mobile": 22,
+        "title_weight": "700",
+        "title_font": "inherit",
+        "text": "Avec les cartes de visite NFC MyVisite, créez des liens pour rendre chaque interaction mémorable. Partagez vos coordonnées, vos réseaux sociaux, vos sites Web et bien plus encore.",
+        "body_color": "#4b5563",
+        "body_size": 15,
+        "body_size_mobile": 13,
+        "body_font": "inherit",
+        "button_label": "Commandez la vôtre !",
+        "button_url": "#shopify-section-template--30149615288669__featured_product_3NJKdP",
+        "btn_bg": "#1a1a1a",
+        "btn_hover": "#061a2f",
+        "btn_text_color": "#ffffff",
+        "btn_size": 15,
+        "btn_radius": 40
+      }
+    },
     "scrolling_text_FLyQPM": {
       "type": "scrolling-text",
       "name": "Scrolling text",
@@ -1080,6 +1116,7 @@
     "rich_text_Me8kNm",
     "testimonials_jt78bf",
     "benefice_icons_Rky4jM",
+    "mediasection_e8NMHV",
     "scrolling_text_FLyQPM",
     "multi_column_q7BycL",
     "faq",
