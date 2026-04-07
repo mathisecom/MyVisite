@@ -392,7 +392,6 @@
         },
         "variant_picker_eeW7Eq": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
             "stack_blocks": true,
