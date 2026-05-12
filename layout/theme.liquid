@@ -11,13 +11,20 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
+    {%- if request.page_type == 'page' -%}
     <meta property="og:type" content="website">
-<meta property="og:url" content="https://myvisite.fr/pages/restaurant-le-soleil">
-<meta property="og:title" content="Restaurant Le Soleil | MyVisite">
-<meta property="og:description" content="📍 Paris, France - Scannez pour voir notre carte.">
-<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0776/6596/0285/files/portrait-male-chef-kitchen.jpg?v=1778619860">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description | escape }}">
+    <meta property="og:image" content="{{ page.content | scan: 'src="' | split: '"' | first | default: 'URL_DE_TON_LOGO_PAR_DEFAUT' }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_description | escape }}">
+    <meta name="twitter:image" content="{{ page.content | scan: 'src="' | split: '"' | first | default: 'URL_DE_TON_LOGO_PAR_DEFAUT' }}">
+  {%- endif -%}
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
