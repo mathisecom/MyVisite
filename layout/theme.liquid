@@ -10,7 +10,15 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 <!doctype html>
 
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
-  <head>
+ {% if template contains 'page' %}
+  {% if page.handle == 'restaurant-le-soleil' %}
+    <meta property="og:title" content="Restaurant Le Soleil">
+    <meta property="og:description" content="📍 Paris, France - Découvrez notre carte et réservez.">
+    <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0776/6596/0285/files/portrait-male-chef-kitchen.jpg?v=1778619860">
+    <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0776/6596/0285/files/portrait-male-chef-kitchen.jpg?v=1778619860">
+    <meta name="twitter:card" content="summary_large_image">
+  {% endif %}
+{% endif %} <head>
     {%- if request.page_type == 'page' -%}
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ canonical_url }}">
