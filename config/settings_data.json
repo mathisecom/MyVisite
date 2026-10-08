@@ -45,7 +45,14 @@
     "favicon": "shopify://shop_images/CREA_1080X1080_-_2026-04-05T232845.819_dd4e4ebf-f311-4cc8-a520-b193cd3bab79.png",
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "319724205969189013": {
+        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Sound": {
